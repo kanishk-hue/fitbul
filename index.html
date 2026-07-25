@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>FitBulls — Premium Gym Equipment | Premier Rubbers Meerut</title>
+<meta name="description" content="FitBulls by Premier Rubbers — India leading manufacturer of gym equipment. Dumbbells, weight plates, commercial machines since 1975. Meerut, UP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#080808;--dark:#0f0f0f;--dark2:#161616;--dark3:#1e1e1e;--dark4:#252525;
+  --white:#ffffff;--gray:rgba(255,255,255,0.5);--gray2:rgba(255,255,255,0.28);
+  --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.04);
+  --red:#e02020;--red2:#ff3b3b;--red-bg:rgba(224,32,32,0.12);--red-glow:rgba(224,32,32,0.25);
+  --gold:#c8983a;--gold2:#e0b050;
+  --green:#22c55e;
+  --font-head:"Plus Jakarta Sans",sans-serif;
+  --font-body:"Manrope",sans-serif;
+  --nav-height:76px;
+  --ease:cubic-bezier(.4,0,.2,1);
+  --ease-out:cubic-bezier(0,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:var(--font-body);font-weight:400;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{display:block;width:100%;height:100%;object-fit:cover}
+button{cursor:pointer;font-family:var(--font-body);border:none;background:none;color:inherit}
+input,textarea,select{font-family:var(--font-body);color:var(--white)}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-thumb{background:var(--red);border-radius:2px}
+::selection{background:var(--red);color:#fff}
+
+/* PROGRESS */
+#topbar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--red),var(--red2));z-index:9999;width:0;pointer-events:none;transition:width .1s}
+
+/* TOAST */
+.toast{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9998;background:rgba(20,20,20,.97);backdrop-filter:blur(20px);border:1px solid var(--border);border-left:3px solid var(--red);border-radius:10px;padding:.9rem 1.3rem;min-width:260px;box-shadow:0 20px 60px rgba(0,0,0,.7);transform:translateX(110%);transition:transform .4s var(--ease)}
+.toast.show{transform:translateX(0)}
+.toast-title{font-weight:700;font-size:.85rem;margin-bottom:2px}
+.toast-msg{font-size:.75rem;color:var(--gray);line-height:1.5}
+
+/* NAV */
+nav#nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:var(--nav-height);display:flex;align-items:center;justify-content:space-between;padding:0 4%;transition:all .5s var(--ease)}
+nav#nav.stuck{background:rgba(8,8,8,.95);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);height:64px}
+.nav-logo{display:flex;align-items:center;gap:.7rem;cursor:pointer}
+.nav-logo img{width:38px;height:38px;object-fit:contain;display:block}
+.nav-logo-text{font-family:var(--font-head);font-size:1.45rem;font-weight:800;letter-spacing:-.5px;line-height:1}
+.nav-logo-text span{color:var(--red)}
+.nav-logo-sub{font-size:.58rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-top:2px}
+.nav-menu{display:flex;gap:.1rem;list-style:none;align-items:center}
+.nav-menu a{font-size:.78rem;font-weight:600;color:var(--gray);padding:.5rem .9rem;border-radius:8px;cursor:pointer;transition:all .25s;position:relative;display:block}
+.nav-menu a:hover,.nav-menu a.on{color:var(--white);background:rgba(255,255,255,.07)}
+.nav-menu a.on::after{content:"";position:absolute;bottom:5px;left:50%;transform:translateX(-50%);width:14px;height:2px;background:var(--red);border-radius:2px}
+.nav-right{display:flex;align-items:center;gap:.7rem}
+.nav-srch{position:relative}
+.srch-ico{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.07);color:var(--gray);display:flex;align-items:center;justify-content:center;transition:all .25s;font-size:.9rem}
+.srch-ico:hover{background:rgba(255,255,255,.12);color:var(--white)}
+#srchBox{position:absolute;top:50%;right:44px;transform:translateY(-50%);width:0;opacity:0;pointer-events:none;transition:all .35s var(--ease);background:var(--dark3);border:1px solid var(--border);border-radius:8px;padding:.5rem .9rem;font-size:.8rem;outline:none}
+#srchBox.on{width:220px;opacity:1;pointer-events:all}
+#srchBox:focus{border-color:var(--red)}
+#srchBox::placeholder{color:var(--gray2)}
+.srch-drop{position:absolute;top:calc(100% + .6rem);right:0;min-width:300px;background:var(--dark3);border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.6);display:none;z-index:100}
+.srch-drop.on{display:block}
+.srch-row{display:flex;align-items:center;gap:.8rem;padding:.8rem 1rem;cursor:pointer;border-bottom:1px solid var(--border2);transition:background .2s}
+.srch-row:last-child{border-bottom:none}
+.srch-row:hover{background:rgba(255,255,255,.05)}
+.srch-row img{width:42px;height:42px;border-radius:7px;object-fit:cover;flex-shrink:0}
+.srch-row-name{font-size:.82rem;font-weight:600;color:var(--white)}
+.srch-row-cat{font-size:.68rem;color:var(--gray);margin-top:1px}
+.btn-cta{background:var(--red);color:#fff;font-size:.77rem;font-weight:700;padding:.62rem 1.3rem;border-radius:8px;transition:all .25s;box-shadow:0 4px 16px var(--red-glow)}
+.btn-cta:hover{background:var(--red2);transform:translateY(-1px);box-shadow:0 6px 22px var(--red-glow)}
+.hbg{display:none;flex-direction:column;gap:5px;padding:7px;cursor:pointer}
+.hbg span{display:block;height:1.5px;background:var(--white);border-radius:2px;transition:all .3s}
+.hbg span:nth-child(1){width:22px}
+.hbg span:nth-child(2){width:15px}
+.hbg span:nth-child(3){width:19px}
+.hbg.on span:nth-child(1){width:22px;transform:translateY(6.5px) rotate(45deg)}
+.hbg.on span:nth-child(2){opacity:0}
+.hbg.on span:nth-child(3){width:22px;transform:translateY(-6.5px) rotate(-45deg)}
+.mob-nav{display:none;position:fixed;top:64px;left:0;right:0;z-index:999;background:rgba(8,8,8,.98);backdrop-filter:blur(24px);flex-direction:column;padding:1.25rem 4%;gap:.2rem;border-bottom:1px solid var(--border)}
+.mob-nav.on{display:flex}
+.mob-nav a{font-size:.95rem;font-weight:600;color:var(--gray);padding:.8rem 1rem;border-radius:8px;cursor:pointer;transition:all .2s}
+.mob-nav a:hover{color:var(--white);background:rgba(255,255,255,.06)}
+
+/* PAGES */
+.pg{display:none}
+.pg.on{display:block}
+
+/* BUTTONS */
+.btn-red{display:inline-flex;align-items:center;gap:.55rem;background:var(--red);color:#fff;font-size:.84rem;font-weight:700;padding:.88rem 2rem;border-radius:10px;transition:all .3s var(--ease);cursor:pointer;box-shadow:0 4px 20px var(--red-glow)}
+.btn-red:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 8px 28px rgba(224,32,32,.4)}
+.btn-ghost{display:inline-flex;align-items:center;gap:.55rem;background:rgba(255,255,255,.07);color:#fff;font-size:.84rem;font-weight:600;padding:.88rem 2rem;border-radius:10px;border:1px solid var(--border);transition:all .3s var(--ease);cursor:pointer}
+.btn-ghost:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);transform:translateY(-1px)}
+.btn-full{width:100%;justify-content:center}
+.btn-sm{padding:.58rem 1.2rem;font-size:.77rem;border-radius:8px}
+
+/* UTILS */
+.wrap{padding:5.5rem 4%}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.68rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);margin-bottom:.85rem}
+.eyebrow::before{content:"";width:18px;height:2px;background:var(--red);border-radius:2px}
+.title{font-family:var(--font-head);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:800;line-height:1.1;letter-spacing:-.8px}
+.title .red{color:var(--red)}
+.subtitle{font-size:1rem;color:var(--gray);line-height:1.85;margin-top:.6rem}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .65s var(--ease-out),transform .65s var(--ease-out)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.07s}.rv.d2{transition-delay:.14s}.rv.d3{transition-delay:.21s}.rv.d4{transition-delay:.28s}
+.ldg{display:flex;align-items:center;justify-content:center;padding:5rem;grid-column:1/-1}
+.ring{width:36px;height:36px;border:2.5px solid var(--border);border-top-color:var(--red);border-radius:50%;animation:spin .75s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.no-items{text-align:center;padding:5rem 2rem;color:var(--gray);font-size:.9rem;grid-column:1/-1}
+
+/* ========== HERO ========== */
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&q=85&fit=crop") center/cover no-repeat;filter:brightness(.3) saturate(.7);transform:scale(1.05);transition:transform 10s ease}
+.hero-bg.go{transform:scale(1)}
+.hero-fg1{position:absolute;inset:0;background:linear-gradient(108deg,rgba(8,8,8,.98) 0%,rgba(8,8,8,.7) 50%,rgba(8,8,8,.3) 100%)}
+.hero-fg2{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,1) 0%,transparent 55%)}
+.hero-dots{position:absolute;inset:0;opacity:.025;background-image:linear-gradient(rgba(255,255,255,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.6) 1px,transparent 1px);background-size:46px 46px}
+.hero-inner{position:relative;z-index:2;padding:0 4% 0;padding-top:110px;max-width:880px;width:100%}
+.hero-pill{display:inline-flex;align-items:center;gap:.6rem;background:rgba(224,32,32,.1);border:1px solid rgba(224,32,32,.2);border-radius:100px;padding:.42rem .95rem .42rem .55rem;margin-bottom:1.85rem;opacity:0;animation:up .8s .2s forwards}
+.hero-pill-dot{width:7px;height:7px;border-radius:50%;background:var(--red);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(224,32,32,.6)}50%{box-shadow:0 0 0 6px rgba(224,32,32,0)}}
+.hero-pill-txt{font-size:.72rem;font-weight:600;letter-spacing:.3px;color:rgba(255,255,255,.88)}
+.hero-h1{font-family:var(--font-head);font-size:clamp(2.8rem,7vw,6.2rem);font-weight:800;line-height:1;letter-spacing:-2.5px;margin-bottom:1.4rem;opacity:0;animation:up .9s .4s forwards}
+.hero-h1 .red{color:var(--red);display:block}
+.hero-h1 .dim{color:rgba(255,255,255,.25);display:block;font-size:66%;font-weight:700;letter-spacing:-.5px}
+.hero-p{font-size:1.08rem;color:var(--gray);line-height:1.85;max-width:510px;margin-bottom:2.3rem;opacity:0;animation:up .9s .6s forwards}
+.hero-btns{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:3.5rem;opacity:0;animation:up .9s .8s forwards}
+.hero-stats{display:flex;border:1px solid var(--border);border-radius:13px;overflow:hidden;background:rgba(255,255,255,.03);backdrop-filter:blur(20px);max-width:520px;opacity:0;animation:up .9s 1s forwards}
+.hstat{flex:1;padding:1.15rem 1.4rem;border-right:1px solid var(--border);text-align:center}
+.hstat:last-child{border-right:none}
+.hstat-n{font-family:var(--font-head);font-size:1.55rem;font-weight:800;background:linear-gradient(135deg,#fff,rgba(255,255,255,.55));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1}
+.hstat-l{font-size:.6rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray);margin-top:3px}
+.hero-scroll-cue{position:absolute;bottom:2.2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.45rem;z-index:2;opacity:0;animation:fadein 1s 1.7s forwards}
+.scroll-txt{font-size:.6rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gray2)}
+.scroll-track{width:22px;height:33px;border:2px solid rgba(255,255,255,.18);border-radius:12px;display:flex;justify-content:center;padding-top:5px}
+.scroll-ball{width:3px;height:6px;background:var(--red);border-radius:2px;animation:ball 2s infinite}
+@keyframes ball{0%{transform:translateY(0);opacity:1}100%{transform:translateY(10px);opacity:0}}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+
+/* TICKER */
+.ticker{background:var(--red);overflow:hidden;padding:.82rem 0;border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)}
+.ticker-inner{display:flex;animation:ticker 28s linear infinite;width:max-content}
+.ticker-item{white-space:nowrap;padding:0 2.3rem;font-size:.74rem;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;display:flex;align-items:center;gap:.8rem}
+.ticker-item::after{content:"✦";opacity:.38}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ========== CATEGORIES ========== */
+#cats-sec{background:var(--dark)}
+.cats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;background:var(--border2);border-radius:16px;overflow:hidden;margin-top:2.5rem}
+.cat-card{position:relative;aspect-ratio:2/3;overflow:hidden;cursor:pointer;background:var(--dark4)}
+.cat-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:all .6s var(--ease);filter:brightness(.45) saturate(.6)}
+.cat-card:hover .cat-bg{filter:brightness(.62) saturate(1.2);transform:scale(1.07)}
+.cat-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.95) 0%,rgba(8,8,8,.28) 55%,transparent 100%)}
+.cat-red{position:absolute;inset:0;background:rgba(224,32,32,0);transition:background .4s}
+.cat-card:hover .cat-red{background:rgba(224,32,32,.06)}
+.cat-body{position:absolute;bottom:0;left:0;right:0;padding:1.3rem 1.1rem;transform:translateY(5px);transition:transform .4s var(--ease)}
+.cat-card:hover .cat-body{transform:translateY(0)}
+.cat-ico{font-size:1.45rem;display:block;margin-bottom:.5rem}
+.cat-name{font-family:var(--font-head);font-size:.95rem;font-weight:700;line-height:1.25;color:var(--white)}
+.cat-count{font-size:.65rem;color:var(--gray);margin-top:.18rem}
+.cat-go{font-size:.64rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--red);margin-top:.55rem;display:inline-block;opacity:0;transform:translateX(-7px);transition:all .35s var(--ease)}
+.cat-card:hover .cat-go{opacity:1;transform:translateX(0)}
+
+/* ========== WHY ========== */
+#why-sec{position:relative;overflow:hidden;background:url("https://images.unsplash.com/photo-1581009137042-c552e485697a?w=1920&q=80&fit=crop") center/cover no-repeat fixed}
+#why-sec::before{content:"";position:absolute;inset:0;background:rgba(8,8,8,.91)}
+#why-sec::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(224,32,32,.04),transparent)}
+.why-inner{position:relative;z-index:1}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-top:2.5rem;border-radius:12px;overflow:hidden}
+.why-card{position:relative;padding:1.85rem 1.65rem;background:rgba(255,255,255,.03);transition:all .35s var(--ease);overflow:hidden;border:1px solid transparent}
+.why-card::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,var(--red-bg),transparent);opacity:0;transition:opacity .4s}
+.why-card:hover{background:rgba(255,255,255,.07);border-color:rgba(224,32,32,.22);transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.6)}
+.why-card:hover::before{opacity:1}
+.why-ico{width:48px;height:48px;border-radius:11px;background:var(--red-bg);border:1px solid rgba(224,32,32,.2);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.1rem;transition:all .35s}
+.why-card:hover .why-ico{background:var(--red);transform:scale(1.1) rotate(-5deg)}
+.why-title{font-family:var(--font-head);font-size:.95rem;font-weight:700;margin-bottom:.6rem;color:var(--white)}
+.why-text{font-size:.82rem;color:var(--gray);line-height:1.75}
+
+/* ========== PRODUCT CARDS ========== */
+.pg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border2);border-radius:16px;overflow:hidden;margin-top:2.5rem}
+.pcard{background:var(--dark2);cursor:pointer;transition:background .3s;position:relative;overflow:hidden}
+.pcard:hover{background:var(--dark3)}
+.pcard-img{position:relative;width:100%;padding-bottom:100%;overflow:hidden;background:var(--dark4)}
+.pcard-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease),filter .6s var(--ease);filter:brightness(.88)}
+.pcard:hover .pcard-img img{transform:scale(1.07);filter:brightness(1) saturate(1.08)}
+.pcard-badges{position:absolute;top:10px;left:10px;display:flex;flex-direction:column;gap:5px;z-index:2}
+.bdg{font-size:.58rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:3px 8px;border-radius:5px;display:inline-block}
+.bdg-best{background:var(--red);color:#fff}
+.bdg-new{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(6px)}
+.pcard-ov{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.65rem;background:rgba(8,8,8,.74);backdrop-filter:blur(6px);opacity:0;transition:opacity .32s;padding:1.3rem;z-index:3}
+.pcard:hover .pcard-ov{opacity:1}
+.pcard-ov .ov-view{width:100%;background:var(--red);color:#fff;font-size:.75rem;font-weight:700;padding:.68rem;border-radius:7px;text-align:center;transition:background .2s}
+.pcard-ov .ov-view:hover{background:var(--red2)}
+.pcard-ov .ov-quote{width:100%;background:rgba(255,255,255,.09);color:#fff;font-size:.72rem;font-weight:600;padding:.62rem;border-radius:7px;text-align:center;border:1px solid rgba(255,255,255,.16);transition:background .2s}
+.pcard-ov .ov-quote:hover{background:rgba(255,255,255,.16)}
+.pcard-body{padding:1.15rem}
+.pcard-tag{font-size:.62rem;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--red);margin-bottom:.35rem}
+.pcard-name{font-family:var(--font-head);font-size:.95rem;font-weight:700;line-height:1.3;margin-bottom:.3rem;color:var(--white)}
+.pcard-desc{font-size:.73rem;color:var(--gray);line-height:1.58;margin-bottom:.7rem}
+.pcard-foot{display:flex;align-items:center;justify-content:space-between}
+.pcard-price{font-size:.7rem;font-weight:700;color:var(--gold);letter-spacing:.4px}
+.pcard-arr{width:28px;height:28px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;color:var(--gray);font-size:.78rem;transition:all .3s}
+.pcard:hover .pcard-arr{background:var(--red);color:#fff;transform:translateX(2px)}
+
+/* ========== TESTIMONIALS ========== */
+#testi-sec{background:var(--black)}
+.testi-slider{overflow:hidden;border-radius:14px;margin-top:2.5rem}
+.testi-track{display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+.testi-card{min-width:100%;background:var(--dark2);border:1px solid var(--border);border-radius:14px;padding:2.5rem;display:grid;grid-template-columns:1fr 88px;gap:2.5rem;align-items:center}
+.testi-left{min-width:0}
+.testi-qmark{font-family:serif;font-size:4.5rem;color:var(--red-bg);line-height:.75;margin-bottom:.85rem}
+.testi-stars{color:var(--gold);letter-spacing:2px;margin-bottom:.9rem}
+.testi-quote{font-family:var(--font-head);font-size:1.1rem;font-style:italic;font-weight:500;color:rgba(255,255,255,.84);line-height:1.8;margin-bottom:1.5rem}
+.testi-person{display:flex;align-items:center;gap:.85rem}
+.testi-av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--red),rgba(224,32,32,.35));display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:1.05rem;font-weight:800;flex-shrink:0;border:2px solid rgba(224,32,32,.28)}
+.testi-name{font-weight:700;font-size:.9rem;color:var(--white)}
+.testi-role{font-size:.7rem;color:var(--gray);margin-top:1px}
+.testi-score{text-align:center}
+.testi-score-n{font-family:var(--font-head);font-size:3.5rem;font-weight:800;line-height:1;background:linear-gradient(135deg,#fff,rgba(255,255,255,.45));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.testi-score-s{color:var(--gold);font-size:.78rem;letter-spacing:2px;margin:4px 0}
+.testi-score-l{font-size:.58rem;letter-spacing:2px;text-transform:uppercase;color:var(--gray)}
+.testi-nav{display:flex;align-items:center;gap:.8rem;margin-top:1.6rem}
+.testi-btn{width:40px;height:40px;border-radius:9px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gray);cursor:pointer;transition:all .25s}
+.testi-btn:hover{border-color:var(--red);color:var(--red);background:var(--red-bg)}
+.testi-dots{display:flex;gap:5px;align-items:center}
+.tdot{width:6px;height:6px;border-radius:50%;background:var(--border);cursor:pointer;transition:all .3s}
+.tdot.on{background:var(--red);width:20px;border-radius:3px}
+
+/* ========== STATS ========== */
+#stats-band{background:linear-gradient(135deg,var(--red),#c01818 50%,#8b1010);position:relative;overflow:hidden}
+#stats-band::before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=1600&q=60&fit=crop") center/cover;opacity:.07;mix-blend-mode:luminosity}
+.stats-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+.stat-item{padding:2.5rem 1.5rem;border-right:1px solid rgba(255,255,255,.14)}
+.stat-item:last-child{border-right:none}
+.stat-n{font-family:var(--font-head);font-size:2.8rem;font-weight:800;display:block;line-height:1}
+.stat-l{font-size:.66rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:.7;margin-top:5px}
+
+/* ========== NEWSLETTER ========== */
+#nl-sec{background:var(--dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.nl-wrap{display:flex;align-items:center;justify-content:space-between;gap:3rem;flex-wrap:wrap}
+.nl-form{display:flex;flex-direction:column;gap:.75rem;flex:1;max-width:390px;min-width:240px}
+.nl-inp{background:var(--dark3);border:1px solid var(--border);border-radius:9px;color:var(--white);padding:.82rem 1rem;font-size:.88rem;width:100%;transition:border-color .25s;outline:none}
+.nl-inp:focus{border-color:var(--red)}
+.nl-inp::placeholder{color:var(--gray2)}
+.nl-fine{font-size:.68rem;color:var(--gray2)}
+
+/* ========== FOOTER ========== */
+footer{background:var(--dark);padding:4.5rem 4% 2rem;border-top:1px solid var(--border)}
+.ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:3.5rem}
+.ft-logo{display:flex;align-items:center;gap:.7rem;margin-bottom:1.1rem}
+.ft-logo img{width:32px;height:32px;object-fit:contain;display:block;flex-shrink:0}
+.ft-logo-name{font-family:var(--font-head);font-size:1.35rem;font-weight:800;line-height:1}
+.ft-logo-name span{color:var(--red)}
+.ft-about{font-size:.82rem;color:var(--gray);line-height:1.78;margin-bottom:1.1rem;max-width:270px}
+.ft-contact{font-size:.78rem;color:var(--gray);line-height:2}
+.ft-socials{display:flex;gap:.5rem;margin-top:1.1rem}
+.ft-soc{width:32px;height:32px;border-radius:7px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.82rem;color:var(--gray);cursor:pointer;transition:all .25s}
+.ft-soc:hover{border-color:var(--red);color:var(--red);background:var(--red-bg)}
+.ft-col-h{font-size:.65rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--white);margin-bottom:1.3rem}
+.ft-links{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+.ft-links li{font-size:.82rem;color:var(--gray);cursor:pointer;transition:color .2s}
+.ft-links li:hover{color:var(--white)}
+.ft-bottom{padding-top:1.75rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.85rem}
+.ft-copy{font-size:.7rem;color:var(--gray)}
+.ft-bdgs{display:flex;gap:.45rem;flex-wrap:wrap}
+.ft-bdg{font-size:.58rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 8px;border-radius:5px;border:1px solid var(--border);color:var(--gray)}
+.ft-gst{font-size:.68rem;color:var(--gray2)}
+
+/* ========== PAGE HERO ========== */
+.ph{padding-top:var(--nav-height);background:var(--dark);border-bottom:1px solid var(--border)}
+.ph-inner{padding:3rem 4% 2.5rem;background:linear-gradient(180deg,rgba(224,32,32,.04),transparent)}
+
+/* ========== PRODUCTS PAGE ========== */
+.prods-layout{display:flex;min-height:80vh}
+.filter-side{width:250px;flex-shrink:0;border-right:1px solid var(--border);padding:2rem 1.5rem;background:var(--dark);position:sticky;top:64px;height:calc(100vh - 64px);overflow-y:auto}
+.fs-title{font-size:.65rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:1.3rem}
+.fs-sec{margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border2)}
+.fs-sec:last-child{border-bottom:none;margin-bottom:0}
+.fs-sec-h{font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.85rem}
+.foption{display:flex;align-items:center;gap:.65rem;padding:.28rem 0;cursor:pointer}
+.foption input{accent-color:var(--red);width:14px;height:14px;cursor:pointer}
+.foption span{font-size:.8rem;color:var(--gray);transition:color .2s}
+.foption:hover span{color:var(--white)}
+.prods-main{flex:1;min-width:0;padding:2rem 1.75rem;background:var(--dark2)}
+.prods-toolbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--border2);flex-wrap:wrap;gap:.75rem}
+.prod-count{font-size:.78rem;color:var(--gray)}
+.prod-count strong{color:var(--white)}
+.sort-sel{background:var(--dark3);border:1px solid var(--border);border-radius:7px;color:var(--white);padding:.48rem .9rem;font-size:.78rem;cursor:pointer;outline:none}
+.sort-sel:focus{border-color:var(--red)}
+.pg3{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border2);border-radius:11px;overflow:hidden}
+
+/* ========== PRODUCT DETAIL ========== */
+.pd-layout{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;padding:3.5rem 4%;align-items:start}
+.pd-main-img{width:100%;padding-bottom:100%;position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--border);background:var(--dark3);cursor:zoom-in;margin-bottom:.65rem}
+.pd-main-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease),filter .5s;filter:brightness(.9)}
+.pd-main-img:hover img{transform:scale(1.05);filter:brightness(1)}
+.pd-thumbs{display:flex;gap:6px}
+.pd-thumb{flex:1;padding-bottom:calc(100%/4);position:relative;border-radius:9px;overflow:hidden;border:2px solid transparent;background:var(--dark3);cursor:pointer;transition:border-color .25s}
+.pd-thumb.on,.pd-thumb:hover{border-color:var(--red)}
+.pd-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.7);transition:all .3s}
+.pd-thumb.on img,.pd-thumb:hover img{filter:brightness(.95)}
+.pd-info{position:sticky;top:80px}
+.pd-cat{font-size:.65rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);margin-bottom:.65rem}
+.pd-name{font-family:var(--font-head);font-size:clamp(1.6rem,3vw,2.5rem);font-weight:800;line-height:1.1;letter-spacing:-.5px;margin-bottom:.4rem;color:var(--white)}
+.pd-model{font-size:.7rem;font-weight:600;letter-spacing:2px;color:var(--gray);margin-bottom:1.3rem}
+.pd-stock{display:inline-flex;align-items:center;gap:.45rem;font-size:.74rem;font-weight:600;color:var(--green);margin-bottom:1.3rem}
+.pd-stock::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+.pd-box{background:var(--dark3);border:1px solid var(--border);border-radius:13px;padding:1.5rem;margin-bottom:1.5rem}
+.pd-box-label{font-size:.64rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:.5rem}
+.pd-box-note{font-size:.78rem;color:var(--gray);line-height:1.68;margin-bottom:1rem}
+.pd-tabs{display:flex;border-bottom:1px solid var(--border);margin-bottom:1.35rem;gap:.15rem}
+.pd-tab{font-size:.7rem;font-weight:700;letter-spacing:.4px;color:var(--gray);padding:.68rem 1rem;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;cursor:pointer;transition:all .25s}
+.pd-tab.on{color:var(--white);border-bottom-color:var(--red)}
+.pd-tab:hover{color:var(--white)}
+.pd-panel{display:none;font-size:.84rem;color:var(--gray);line-height:1.82}
+.pd-panel.on{display:block}
+.pd-panel p{margin-bottom:.75rem}
+.spec-table{width:100%;border-collapse:collapse}
+.spec-table tr{border-bottom:1px solid var(--border2)}
+.spec-table td{padding:.58rem 0;font-size:.82rem;vertical-align:top}
+.spec-table td:first-child{color:var(--gray);width:44%}
+.spec-table td:last-child{color:var(--white)}
+.rel-wrap{padding:3rem 4%;background:var(--dark);border-top:1px solid var(--border)}
+.rel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border2);border-radius:12px;overflow:hidden;margin-top:1.5rem}
+
+/* ========== ABOUT ========== */
+.ab-hero{padding-top:var(--nav-height);min-height:68vh;position:relative;background:url("https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=1800&q=80&fit=crop") center/cover no-repeat;display:flex;align-items:flex-end}
+.ab-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(8,8,8,.97) 0%,rgba(8,8,8,.52) 60%,rgba(8,8,8,.25) 100%)}
+.ab-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,1) 0%,transparent 50%)}
+.ab-hero-c{position:relative;z-index:1;padding:4.5rem 4%}
+.ab-story{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;padding:5.5rem 4%;align-items:center;background:var(--dark)}
+.ab-img{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--border)}
+.ab-img::before{content:"";display:block;padding-bottom:125%}
+.ab-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.82) contrast(1.06)}
+.ab-img-tag{position:absolute;bottom:1.3rem;right:-.4rem;background:var(--red);color:#fff;padding:.5rem 1.1rem;border-radius:7px;font-size:.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;box-shadow:0 8px 28px rgba(0,0,0,.5)}
+.ab-tl{background:var(--black);padding:5.5rem 4%;border-top:1px solid var(--border)}
+.tl{margin-top:2.5rem;position:relative;padding-left:1.75rem}
+.tl::before{content:"";position:absolute;left:0;top:0;bottom:0;width:1.5px;background:linear-gradient(to bottom,var(--red),rgba(224,32,32,.1),transparent)}
+.tl-item{padding:0 0 2.5rem 2.2rem;position:relative}
+.tl-item::before{content:"";position:absolute;left:-5.5px;top:.45rem;width:11px;height:11px;border-radius:50%;background:var(--red);border:2px solid var(--black);box-shadow:0 0 0 3px rgba(224,32,32,.18)}
+.tl-yr{font-family:var(--font-head);font-size:1.3rem;font-weight:800;color:var(--red);margin-bottom:.28rem}
+.tl-h{font-family:var(--font-head);font-size:.95rem;font-weight:700;margin-bottom:.42rem;color:var(--white)}
+.tl-p{font-size:.82rem;color:var(--gray);line-height:1.75}
+.ab-team{padding:5.5rem 4%;background:var(--dark);border-top:1px solid var(--border)}
+.team-card{background:var(--dark3);border:1px solid var(--border);border-radius:14px;padding:2.25rem;max-width:480px;position:relative;overflow:hidden}
+.team-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),transparent)}
+.tm-name{font-family:var(--font-head);font-size:1.55rem;font-weight:800;margin-bottom:.22rem;color:var(--white)}
+.tm-role{font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:1rem}
+.tm-bio{font-size:.84rem;color:var(--gray);line-height:1.82}
+.tm-contact{margin-top:1.1rem;font-size:.78rem;color:var(--gray2);line-height:1.8}
+
+/* ========== CONTACT ========== */
+.ct-hero{padding-top:var(--nav-height);background:url("https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1600&q=80&fit=crop") center/cover;position:relative}
+.ct-hero::before{content:"";position:absolute;inset:0;background:rgba(8,8,8,.88)}
+.ct-layout{display:grid;grid-template-columns:1fr 1.3fr;gap:3.5rem;padding:4.5rem 4%;background:var(--dark)}
+.ct-info-item{display:flex;align-items:flex-start;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--border2)}
+.ct-ico{width:42px;height:42px;border-radius:10px;background:var(--red-bg);border:1px solid rgba(224,32,32,.2);display:flex;align-items:center;justify-content:center;font-size:1.05rem;flex-shrink:0;transition:all .3s}
+.ct-info-item:hover .ct-ico{background:var(--red);transform:scale(1.05)}
+.ct-label{font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gray);margin-bottom:.25rem}
+.ct-value{font-size:.84rem;color:rgba(255,255,255,.78);line-height:1.58}
+.ct-form-card{background:var(--dark3);border:1px solid var(--border);border-radius:14px;padding:2.25rem;position:relative;overflow:hidden}
+.ct-form-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),var(--red2),transparent)}
+.ct-form-title{font-family:var(--font-head);font-size:1.4rem;font-weight:800;margin-bottom:1.75rem;color:var(--white)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:.9rem}
+.fgrp{margin-bottom:.9rem}
+.flabel{display:block;font-size:.63rem;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--gray);margin-bottom:.48rem}
+.finput,.ftarea,.fselect{width:100%;background:var(--dark2);border:1px solid var(--border);border-radius:9px;color:var(--white);padding:.78rem .95rem;font-size:.86rem;transition:all .25s;outline:none}
+.finput:focus,.ftarea:focus,.fselect:focus{border-color:var(--red);background:rgba(224,32,32,.04)}
+.finput::placeholder,.ftarea::placeholder{color:var(--gray2)}
+.ftarea{min-height:120px;resize:vertical}
+.faq-sec{background:var(--black);padding:5rem 4%;border-top:1px solid var(--border)}
+.faq-item{border-bottom:1px solid var(--border2)}
+.faq-q{width:100%;background:none;border:none;color:var(--white);font-family:var(--font-head);font-size:.97rem;font-weight:700;text-align:left;padding:1.1rem 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:.85rem;transition:color .25s}
+.faq-q:hover{color:rgba(255,255,255,.8)}
+.faq-ico{width:24px;height:24px;border-radius:6px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.7rem;flex-shrink:0;color:var(--gray);transition:all .3s}
+.faq-item.open .faq-ico{background:var(--red);border-color:var(--red);color:#fff;transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;font-size:.84rem;color:var(--gray);line-height:1.82;transition:max-height .4s var(--ease),padding .4s}
+.faq-item.open .faq-a{max-height:280px;padding-bottom:1.1rem}
+
+/* ========== ADMIN ========== */
+.adm-login{min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--black);padding:2rem}
+.adm-card{background:var(--dark2);border:1px solid var(--border);border-radius:18px;padding:2.75rem;width:100%;max-width:390px;box-shadow:0 20px 60px rgba(0,0,0,.7);position:relative;overflow:hidden}
+.adm-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),var(--red2))}
+.adm-title{font-family:var(--font-head);font-size:1.7rem;font-weight:800;letter-spacing:-.4px;margin-bottom:.35rem;color:var(--white)}
+.adm-sub{font-size:.82rem;color:var(--gray);margin-bottom:1.75rem}
+.adm-wrap{min-height:100vh;background:var(--black)}
+.adm-top{height:62px;background:var(--dark2);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 1.75rem;position:sticky;top:0;z-index:100}
+.adm-top-title{font-family:var(--font-head);font-size:1.15rem;font-weight:800;color:var(--white)}
+.adm-top-title span{color:var(--red)}
+.adm-body{display:flex;min-height:calc(100vh - 62px)}
+.adm-side{width:210px;background:var(--dark2);border-right:1px solid var(--border);padding:1.35rem 0;flex-shrink:0}
+.adm-side-title{font-size:.6rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gray);padding:0 1.35rem;margin-bottom:.75rem}
+.adm-nav-item{display:flex;align-items:center;gap:.65rem;padding:.78rem 1.35rem;color:var(--gray);font-size:.82rem;font-weight:600;cursor:pointer;transition:all .22s;border-left:3px solid transparent}
+.adm-nav-item:hover,.adm-nav-item.on{color:var(--white);background:rgba(255,255,255,.05);border-left-color:var(--red)}
+.adm-content{flex:1;padding:2.25rem;overflow-y:auto;background:var(--dark)}
+.adm-panel{display:none}.adm-panel.on{display:block}
+.adm-sec-title{font-family:var(--font-head);font-size:1.5rem;font-weight:800;letter-spacing:-.3px;margin-bottom:1.75rem;color:var(--white)}
+.adm-sec-title span{color:var(--red)}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-bottom:2.25rem}
+.stat-card{background:var(--dark2);border:1px solid var(--border);border-radius:12px;padding:1.5rem;position:relative;overflow:hidden}
+.stat-card::after{content:"";position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--border)}
+.stat-card.hi::after{background:linear-gradient(90deg,var(--red),transparent)}
+.stat-card-n{font-family:var(--font-head);font-size:2.2rem;font-weight:800;line-height:1;color:var(--white)}
+.stat-card-n.red{color:var(--red)}
+.stat-card-l{font-size:.65rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray);margin-top:.35rem}
+.tbl-wrap{background:var(--dark2);border:1px solid var(--border);border-radius:12px;overflow:auto;margin-bottom:1.75rem}
+.dtbl{width:100%;border-collapse:collapse}
+.dtbl th{font-size:.6rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gray);padding:.85rem 1.1rem;border-bottom:1px solid var(--border);text-align:left;background:rgba(255,255,255,.02);white-space:nowrap}
+.dtbl td{padding:.82rem 1.1rem;font-size:.8rem;color:var(--gray);border-bottom:1px solid var(--border2);vertical-align:middle}
+.dtbl tr:last-child td{border-bottom:none}
+.dtbl tr:hover td{background:rgba(255,255,255,.02);color:var(--white)}
+.spill{font-size:.58rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:5px;display:inline-block}
+.s-new{background:rgba(224,32,32,.15);color:var(--red2)}
+.s-read{background:rgba(34,197,94,.15);color:var(--green)}
+.s-done{background:rgba(255,255,255,.08);color:var(--gray)}
+.st-sel{background:var(--dark3);border:1px solid var(--border);border-radius:6px;color:var(--white);padding:3px 7px;font-size:.7rem;cursor:pointer;outline:none}
+
+/* ========== RESPONSIVE ========== */
+@media(max-width:1100px){
+  .cats-grid{grid-template-columns:repeat(3,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .pg-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .pd-layout{grid-template-columns:1fr;gap:2.5rem}.pd-info{position:static}
+  .ab-story{grid-template-columns:1fr;gap:3rem}
+  .ct-layout{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr 1fr}
+  .rel-grid{grid-template-columns:repeat(2,1fr)}
+  .pg3{grid-template-columns:repeat(2,1fr)}
+  .adm-body{flex-direction:column}.adm-side{width:100%;padding:.4rem 0}
+}
+@media(max-width:768px){
+  :root{--nav-height:64px}
+  .nav-menu,.nav-cta-wrap{display:none}.hbg{display:flex}
+  .cats-grid{grid-template-columns:repeat(2,1fr)}
+  .pg-grid{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr}
+  .hero-stats{flex-wrap:wrap}.hstat{min-width:50%;border-right:none;border-bottom:1px solid var(--border)}
+  .hstat:nth-child(odd){border-right:1px solid var(--border)}
+  .hero-btns{flex-direction:column;align-items:flex-start}
+  .btn-red,.btn-ghost{width:100%;justify-content:center}
+  .prods-layout{flex-direction:column}
+  .filter-side{width:100%;height:auto;position:relative;top:0}
+  .frow{grid-template-columns:1fr}
+  .ft-bottom{flex-direction:column;align-items:flex-start}
+  .testi-card{grid-template-columns:1fr;gap:1.5rem;padding:1.75rem}
+  .testi-score{display:flex;gap:1rem;align-items:baseline}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .pg3{grid-template-columns:1fr}
+  .rel-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .cats-grid{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<div id="topbar"></div>
+<div class="toast" id="toast"><div class="toast-title" id="t-title"></div><div class="toast-msg" id="t-msg"></div></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-logo" onclick="G('home')">
+    <img src="/logo.webp" alt="FitBulls" onerror="this.style.display='none'">
+    <div>
+      <div class="nav-logo-text">Fit<span>Bulls</span></div>
+      <div class="nav-logo-sub">By Premier Rubbers &middot; Est. 1975</div>
+    </div>
+  </div>
+  <ul class="nav-menu">
+    <li><a id="nv-home" class="on" onclick="G('home')">Home</a></li>
+    <li><a id="nv-products" onclick="G('products')">Products</a></li>
+    <li><a id="nv-about" onclick="G('about')">About</a></li>
+    <li><a id="nv-contact" onclick="G('contact')">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-srch">
+      <button class="srch-ico" id="srchBtn" aria-label="Search">&#128269;</button>
+      <input id="srchBox" type="text" placeholder="Search products&#8230;" autocomplete="off" aria-label="Search products">
+      <div class="srch-drop" id="srchDrop"></div>
+    </div>
+    <div class="nav-cta-wrap">
+      <button class="btn-cta" onclick="G('contact')">Get a Quote</button>
+    </div>
+    <button class="hbg" id="hbg" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<nav class="mob-nav" id="mobNav">
+  <a onclick="G('home');cmob()">Home</a>
+  <a onclick="G('products');cmob()">Products</a>
+  <a onclick="G('about');cmob()">About</a>
+  <a onclick="G('contact');cmob()">Contact</a>
+  <a onclick="G('contact');cmob()" style="color:var(--red)">Get a Quote &rarr;</a>
+</nav>
+
+<!-- HOME -->
+<div id="pg-home" class="pg on">
+  <section id="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-fg1"></div><div class="hero-fg2"></div><div class="hero-dots"></div>
+    <div class="hero-inner">
+      <div class="hero-pill"><div class="hero-pill-dot"></div><div class="hero-pill-txt">Est. 1975 &middot; Meerut, India &middot; 500+ Products &middot; 4 Manufacturing Units</div></div>
+      <h1 class="hero-h1">Forged for<br><span class="red">Champions.</span><span class="dim">Built to Outlast Everything.</span></h1>
+      <p class="hero-p">Premier Rubbers manufactures world-class gym equipment trusted by thousands of gym owners, athletes and distributors across India and internationally.</p>
+      <div class="hero-btns">
+        <button class="btn-red" onclick="G('products')">Explore Equipment &rarr;</button>
+        <button class="btn-ghost" onclick="G('contact')">Request a Quote</button>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><div class="hstat-n">1975</div><div class="hstat-l">Est. Since</div></div>
+        <div class="hstat"><div class="hstat-n">500+</div><div class="hstat-l">Products</div></div>
+        <div class="hstat"><div class="hstat-n">4</div><div class="hstat-l">Mfg. Units</div></div>
+        <div class="hstat"><div class="hstat-n">180kg</div><div class="hstat-l">Max User Wt.</div></div>
+      </div>
+    </div>
+    <div class="hero-scroll-cue"><div class="scroll-txt">Scroll</div><div class="scroll-track"><div class="scroll-ball"></div></div></div>
+  </section>
+
+  <div class="ticker"><div class="ticker-inner">
+    <div class="ticker-item">Dumbbells</div><div class="ticker-item">Weight Plates</div><div class="ticker-item">Phantom Series</div><div class="ticker-item">Rogue Series</div><div class="ticker-item">Plate Loaded</div><div class="ticker-item">Rigs &amp; Racks</div><div class="ticker-item">Cardio</div><div class="ticker-item">Barbells</div><div class="ticker-item">Commercial Grade</div><div class="ticker-item">Made in India</div><div class="ticker-item">Since 1975</div>
+    <div class="ticker-item">Dumbbells</div><div class="ticker-item">Weight Plates</div><div class="ticker-item">Phantom Series</div><div class="ticker-item">Rogue Series</div><div class="ticker-item">Plate Loaded</div><div class="ticker-item">Rigs &amp; Racks</div><div class="ticker-item">Cardio</div><div class="ticker-item">Barbells</div><div class="ticker-item">Commercial Grade</div><div class="ticker-item">Made in India</div><div class="ticker-item">Since 1975</div>
+  </div></div>
+
+  <section id="cats-sec" class="wrap">
+    <div class="eyebrow rv">Product Range</div>
+    <h2 class="title rv">Our <span class="red">Catalogue</span></h2>
+    <div class="cats-grid" id="catsGrid"><div class="ldg"><div class="ring"></div></div></div>
+    <p id="catsNote" class="rv" style="text-align:right;margin-top:1rem;font-size:.75rem;color:var(--gray)"></p>
+  </section>
+
+  <section id="why-sec" class="wrap">
+    <div class="why-inner">
+      <div class="eyebrow rv">Why FitBulls</div>
+      <h2 class="title rv" style="max-width:580px">Trusted by <span class="red">Thousands</span> Across India</h2>
+      <div class="why-grid" style="margin-top:2.5rem">
+        <div class="why-card rv d1"><div class="why-ico">&#127981;</div><div class="why-title">In-House Manufacturing</div><p class="why-text">From raw casting to finished product &mdash; manufactured in-house across 4 units in Meerut. Full quality control, zero outsourcing.</p></div>
+        <div class="why-card rv d2"><div class="why-ico">&#9881;&#65039;</div><div class="why-title">Automated Production</div><p class="why-text">State-of-the-art rubber processing, kneaders, mixers, cutting, welding and moulding machinery ensures consistent quality at scale.</p></div>
+        <div class="why-card rv d3"><div class="why-ico">&#128666;</div><div class="why-title">Pan-India Delivery</div><p class="why-text">Reliable dispatch to gyms, wholesalers and retailers nationwide. Bulk and commercial orders receive priority logistics handling.</p></div>
+        <div class="why-card rv d4"><div class="why-ico">&#127760;</div><div class="why-title">Export Ready</div><p class="why-text">Active international exporter. GST: 09AABFP0071D1ZP. Competitive export pricing available for qualified buyers worldwide.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" style="background:var(--dark)">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem">
+      <div><div class="eyebrow rv">Top Products</div><h2 class="title rv">Featured <span class="red">Equipment</span></h2></div>
+      <button class="btn-ghost rv btn-sm" onclick="G('products')">View All &rarr;</button>
+    </div>
+    <div class="pg-grid" id="featGrid"><div class="ldg"><div class="ring"></div></div></div>
+  </section>
+
+  <section id="testi-sec" class="wrap">
+    <div class="eyebrow rv">Client Reviews</div>
+    <h2 class="title rv">What Our <span class="red">Clients Say</span></h2>
+    <div class="testi-slider rv"><div class="testi-track" id="testiTrack"><div class="ldg"><div class="ring"></div></div></div></div>
+    <div class="testi-nav"><button class="testi-btn" onclick="mvT(-1)">&#8592;</button><div class="testi-dots" id="testiDots"></div><button class="testi-btn" onclick="mvT(1)">&#8594;</button></div>
+  </section>
+
+  <section id="stats-band"><div class="stats-grid">
+    <div class="stat-item rv d1"><span class="stat-n">1975</span><span class="stat-l">Established Since</span></div>
+    <div class="stat-item rv d2"><span class="stat-n">500+</span><span class="stat-l">Products &amp; SKUs</span></div>
+    <div class="stat-item rv d3"><span class="stat-n">4</span><span class="stat-l">Manufacturing Units</span></div>
+    <div class="stat-item rv d4"><span class="stat-n">PAN India</span><span class="stat-l">Supply &amp; Export</span></div>
+  </div></section>
+
+  <section id="nl-sec" class="wrap">
+    <div class="nl-wrap">
+      <div>
+        <div class="eyebrow">Stay Updated</div>
+        <h2 class="title" style="font-size:clamp(1.55rem,3vw,2.3rem)">New Products &amp;<br><span class="red">Trade Offers</span></h2>
+        <p class="subtitle" style="max-width:360px;font-size:.9rem">Subscribe for new launches, wholesale offers and industry updates from Premier Rubbers.</p>
+      </div>
+      <form class="nl-form" onsubmit="doNL(event)">
+        <input class="nl-inp" type="text" id="nlName" placeholder="Your name">
+        <input class="nl-inp" type="email" id="nlEmail" placeholder="Business email address" required>
+        <button class="btn-red btn-full" type="submit">Subscribe Now &rarr;</button>
+        <p class="nl-fine">No spam. For trade enquiries use the Contact page.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="ft-grid">
+      <div>
+        <div class="ft-logo"><img src="/logo.webp" alt="" onerror="this.style.display='none'"><div class="ft-logo-name">Fit<span>Bulls</span></div></div>
+        <p class="ft-about">Premium gym equipment by Premier Rubbers, Meerut. India's trusted Manufacturer, Wholesaler, Exporter &amp; Supplier since 1975.</p>
+        <div class="ft-contact">&#128205; C-4-5, Delhi Road, Sports Goods Complex<br>Meerut &ndash; 250002, Uttar Pradesh, India<br>&#128222; 08048958125 &nbsp;|&nbsp; &#127760; www.fitbulls.co.in</div>
+        <div class="ft-socials"><div class="ft-soc">&#128247;</div><div class="ft-soc">&#128100;</div><div class="ft-soc">&#9654;&#65039;</div></div>
+      </div>
+      <div><div class="ft-col-h">Products</div><ul class="ft-links"><li onclick="goCat('dumbbells')">Dumbbells</li><li onclick="goCat('weight-lifting-plates')">Weight Lifting Plates</li><li onclick="goCat('phantom-series')">Phantom Series</li><li onclick="goCat('rogue-series')">Rogue Series</li><li onclick="goCat('plate-loaded-series')">Plate Loaded Series</li><li onclick="goCat('rigs-and-racks')">Rigs &amp; Racks</li><li onclick="goCat('cardio')">Cardio Equipment</li></ul></div>
+      <div><div class="ft-col-h">Services</div><ul class="ft-links"><li onclick="G('contact')">Wholesale Enquiry</li><li onclick="G('contact')">Export Enquiry</li><li onclick="G('contact')">Commercial Gym Setup</li><li onclick="G('contact')">Bulk Orders</li><li onclick="G('contact')">Custom Requirements</li></ul></div>
+      <div><div class="ft-col-h">Company</div><ul class="ft-links"><li onclick="G('about')">About Us</li><li onclick="G('about')">Our Story</li><li onclick="G('contact')">Contact</li><li onclick="window.open('https://www.fitbulls.co.in','_blank')">Official Website</li><li onclick="G('admin')">Admin Panel</li></ul></div>
+    </div>
+    <div class="ft-bottom">
+      <div class="ft-copy">&copy; 2024 FitBulls &middot; Premier Rubbers, Meerut. All rights reserved.</div>
+      <div class="ft-bdgs"><span class="ft-bdg">Manufacturer</span><span class="ft-bdg">Wholesaler</span><span class="ft-bdg">Exporter</span><span class="ft-bdg">Since 1975</span></div>
+      <div class="ft-gst">GST: 09AABFP0071D1ZP</div>
+    </div>
+  </footer>
+</div>
+
+<!-- PRODUCTS PAGE -->
+<div id="pg-products" class="pg">
+  <div class="ph"><div class="ph-inner">
+    <div class="eyebrow">Full Catalogue</div>
+    <h1 class="title">Our <span class="red">Products</span></h1>
+    <p class="subtitle" style="font-size:.86rem">500+ products &middot; 10 categories &middot; Manufacturer-direct pricing</p>
+  </div></div>
+  <div class="prods-layout">
+    <aside class="filter-side">
+      <div class="fs-title">Filter By</div>
+      <div class="fs-sec">
+        <div class="fs-sec-h">Category</div>
+        <div id="fCatList"><label class="foption"><input type="radio" name="cat" value="" checked onchange="doFilter()"><span>All Products</span></label></div>
+      </div>
+      <div class="fs-sec">
+        <div class="fs-sec-h">Highlights</div>
+        <label class="foption"><input type="checkbox" id="ff" onchange="doFilter()"><span>Featured Only</span></label>
+        <label class="foption"><input type="checkbox" id="fb" onchange="doFilter()"><span>Bestsellers</span></label>
+        <label class="foption"><input type="checkbox" id="fn" onchange="doFilter()"><span>New Arrivals</span></label>
+      </div>
+    </aside>
+    <div class="prods-main">
+      <div class="prods-toolbar">
+        <span class="prod-count" id="prodCount">Loading&#8230;</span>
+        <select class="sort-sel" onchange="doFilter()"><option value="">Featured First</option><option value="az">A &ndash; Z</option></select>
+      </div>
+      <div class="pg3" id="prodGrid"><div class="ldg"><div class="ring"></div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCT DETAIL -->
+<div id="pg-product-detail" class="pg">
+  <div class="ph"><div class="ph-inner">
+    <button onclick="G('products')" style="background:rgba(255,255,255,.08);border:1px solid var(--border);border-radius:8px;color:var(--gray);font-size:.76rem;font-weight:600;padding:.5rem .95rem;cursor:pointer;transition:all .25s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color=''">&#8592; Back to Products</button>
+  </div></div>
+  <div id="pdContent"><div class="ldg" style="height:60vh"><div class="ring"></div></div></div>
+  <div class="rel-wrap"><div class="eyebrow">Related Products</div><div class="rel-grid" id="relGrid"></div></div>
+</div>
+
+<!-- ABOUT -->
+<div id="pg-about" class="pg">
+  <div class="ab-hero">
+    <div class="ab-hero-c">
+      <div class="eyebrow">Our Story</div>
+      <h1 style="font-family:var(--font-head);font-size:clamp(2.2rem,5vw,4.3rem);font-weight:800;line-height:1.06;letter-spacing:-1.5px;max-width:680px;color:var(--white)">Born in a Foundry.<br><span style="color:var(--red)">Built for Champions.</span></h1>
+    </div>
+  </div>
+  <div class="ab-story">
+    <div>
+      <div class="eyebrow rv">The Mission</div>
+      <h2 class="title rv">India&rsquo;s Premier <span class="red">Gym Equipment</span> Manufacturer</h2>
+      <p style="font-size:.88rem;color:var(--gray);line-height:1.88;margin:.7rem 0" class="rv">Established in 1975, <strong style="color:#fff">Premier Rubbers</strong> is a leading Manufacturer, Wholesaler, Exporter, Supplier and Importer of a wide range of gym machines and equipment under the <strong style="color:#fff">FitBulls</strong> brand.</p>
+      <p style="font-size:.88rem;color:var(--gray);line-height:1.88;margin-bottom:.8rem" class="rv">We are a self-reliant company &mdash; from raw casting to finished product, everything manufactured in-house across our four production units. Automated rubber processing, kneaders, mixers, cutting, welding and moulding ensures consistent quality.</p>
+      <p style="font-size:.88rem;color:var(--gray);line-height:1.88;margin-bottom:1.85rem" class="rv">Under the leadership of <strong style="color:#fff">Mr. Samyak Jain</strong>, we have gained a vast clientele spanning gym owners, distributors, exporters and athletes across India and beyond.</p>
+      <div style="display:flex;gap:.9rem;flex-wrap:wrap" class="rv"><button class="btn-red" onclick="G('contact')">Get in Touch &rarr;</button><button class="btn-ghost" onclick="G('products')">View Products</button></div>
+    </div>
+    <div class="rv"><div class="ab-img"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=700&q=85&fit=crop" alt="FitBulls Equipment"><div class="ab-img-tag">Est. 1975</div></div></div>
+  </div>
+  <div class="ab-tl">
+    <div class="eyebrow rv">Journey</div>
+    <h2 class="title rv">Our <span class="red">Milestones</span></h2>
+    <div class="tl">
+      <div class="tl-item rv"><div class="tl-yr">1975</div><div class="tl-h">Founded in Meerut</div><p class="tl-p">Premier Rubbers established in Meerut &mdash; India&rsquo;s hub for sports goods manufacturing. Started with rubber gym equipment production.</p></div>
+      <div class="tl-item rv"><div class="tl-yr">1990s</div><div class="tl-h">Scaling Production</div><p class="tl-p">Expanded to multiple units. Installed automated rubber processing, kneaders, mixers, cutting, welding and moulding for scalable, consistent quality.</p></div>
+      <div class="tl-item rv"><div class="tl-yr">2000s</div><div class="tl-h">Export &amp; Wholesale Growth</div><p class="tl-p">Became a recognized Wholesaler, Exporter and Supplier across India and internationally. GST registered: 09AABFP0071D1ZP.</p></div>
+      <div class="tl-item rv"><div class="tl-yr">2010s</div><div class="tl-h">FitBulls Brand Launch</div><p class="tl-p">Launched FitBulls &mdash; covering Phantom, TE, FLD, Rogue, Plate Loaded Series plus the complete dumbbell and weight plate range.</p></div>
+      <div class="tl-item rv"><div class="tl-yr">Today</div><div class="tl-h">500+ Products &middot; Pan-India</div><p class="tl-p">Four manufacturing units, 500+ SKUs, growing network of gym owners, distributors and exporters. Setting the benchmark for made-in-India gym equipment.</p></div>
+    </div>
+  </div>
+  <div class="ab-team">
+    <div class="eyebrow rv">Leadership</div>
+    <div class="team-card rv">
+      <div class="tm-name">Mr. Samyak Jain</div>
+      <div class="tm-role">Owner &middot; Premier Rubbers</div>
+      <p class="tm-bio">Under the leadership of Mr. Samyak Jain, Premier Rubbers has built FitBulls into a trusted name across India&rsquo;s fitness industry. His focus on in-house manufacturing quality, customer service and self-reliant production sets Premier Rubbers apart from all competition.</p>
+      <div class="tm-contact">&#128205; C-4-5, Delhi Road, Sports Goods Complex, Meerut &ndash; 250002, UP<br>&#128222; 08048958125</div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div id="pg-contact" class="pg">
+  <div class="ct-hero"><div class="ph-inner" style="position:relative;z-index:1">
+    <div class="eyebrow">Get in Touch</div>
+    <h1 class="title">Enquire About Our <span class="red">Products</span></h1>
+    <p class="subtitle" style="font-size:.86rem;max-width:470px">Wholesale, export, bulk orders or commercial gym setup &mdash; we respond within 24 hours.</p>
+  </div></div>
+  <div class="ct-layout">
+    <div>
+      <div class="ct-info-item"><div class="ct-ico">&#128222;</div><div><div class="ct-label">Phone</div><div class="ct-value">08048958125<br><span style="font-size:.7rem;color:var(--gray2)">Mon&ndash;Sat &middot; 79% Response Rate</span></div></div></div>
+      <div class="ct-info-item"><div class="ct-ico">&#127760;</div><div><div class="ct-label">Website</div><div class="ct-value"><a href="https://www.fitbulls.co.in" target="_blank" style="color:var(--red)">www.fitbulls.co.in</a></div></div></div>
+      <div class="ct-info-item"><div class="ct-ico">&#128205;</div><div><div class="ct-label">Factory &amp; Office</div><div class="ct-value">C-4-5, Premier Rubber, Delhi Road<br>Sports Goods Complex<br>Meerut &ndash; 250002, Uttar Pradesh, India</div></div></div>
+      <div class="ct-info-item"><div class="ct-ico">&#129534;</div><div><div class="ct-label">GST Number</div><div class="ct-value">09AABFP0071D1ZP</div></div></div>
+      <div class="ct-info-item"><div class="ct-ico">&#128100;</div><div><div class="ct-label">Owner</div><div class="ct-value">Mr. Samyak Jain<br><span style="font-size:.7rem;color:var(--gray2)">Partner, Premier Rubbers</span></div></div></div>
+      <div style="margin-top:1.5rem;background:var(--dark3);border:1px solid var(--border);border-radius:12px;height:150px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;color:var(--gray);font-size:.82rem"><span style="font-size:1.75rem">&#128506;</span><span>Sports Goods Complex, Meerut UP</span></div>
+    </div>
+    <div>
+      <div class="ct-form-card">
+        <div class="ct-form-title">Send an Enquiry</div>
+        <form onsubmit="doEnq(event)" id="enqForm">
+          <div class="frow"><div class="fgrp"><label class="flabel">Full Name *</label><input class="finput" name="name" placeholder="Your name" required></div><div class="fgrp"><label class="flabel">Email *</label><input class="finput" name="email" type="email" placeholder="your@email.com" required></div></div>
+          <div class="frow"><div class="fgrp"><label class="flabel">Phone</label><input class="finput" name="phone" placeholder="+91 98765 43210"></div><div class="fgrp"><label class="flabel">City</label><input class="finput" name="city" placeholder="Delhi, Mumbai&hellip;"></div></div>
+          <div class="fgrp"><label class="flabel">Company / Gym Name</label><input class="finput" name="company" placeholder="Optional"></div>
+          <div class="fgrp"><label class="flabel">Enquiry Type</label>
+            <select class="fselect" name="enquiryType">
+              <option value="general">General Enquiry</option>
+              <option value="wholesale">Wholesale / Bulk Order</option>
+              <option value="export">Export Enquiry</option>
+              <option value="gym-setup">Commercial Gym Setup</option>
+              <option value="product">Specific Product Enquiry</option>
+            </select>
+          </div>
+          <div class="fgrp"><label class="flabel">Message *</label><textarea class="ftarea" name="message" placeholder="Tell us what you need &mdash; products, quantities, delivery location&hellip;" required></textarea></div>
+          <button class="btn-red btn-full" type="submit" id="enqBtn">Send Enquiry &rarr;</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="faq-sec">
+    <div class="eyebrow rv">FAQ</div>
+    <h2 class="title rv">Common <span class="red">Questions</span></h2>
+    <div class="rv d1">
+      <div class="faq-item"><button class="faq-q" onclick="tFaq(this)">Do you supply to gyms and distributors? <span class="faq-ico">&#8595;</span></button><div class="faq-a">Yes. We are a leading Manufacturer, Wholesaler and Supplier. We supply to gym owners, distributors, retailers and exporters across India with competitive wholesale pricing. Contact us for volume-based quotations.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="tFaq(this)">Do you export internationally? <span class="faq-ico">&#8595;</span></button><div class="faq-a">Yes, Premier Rubbers actively exports FitBulls equipment internationally. Contact us with your country, required products and quantities for export pricing and MOQ details.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="tFaq(this)">What product series do you manufacture? <span class="faq-ico">&#8595;</span></button><div class="faq-a">We manufacture Phantom Series (FPS), TE Series, FLD Series, Rogue Series (FRS), Plate Loaded Series (TA range), Dumbbells (Bouncer, Hexagon, Vinyl, Chrome, Arc, Fan, Spiral, Y-Cut), Weight Lifting Plates, Spin Bikes (FBS range), Elliptical Trainers, Weight Lifting Rods, Rigs &amp; Racks and more.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="tFaq(this)">What is the maximum user weight? <span class="faq-ico">&#8595;</span></button><div class="faq-a">Our commercial gym machines are rated for a maximum user weight of 180 kg, built to commercial-grade standards suitable for heavy daily use in professional gyms.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="tFaq(this)">Can you supply a complete commercial gym? <span class="faq-ico">&#8595;</span></button><div class="faq-a">Yes. We provide complete commercial gym equipment supply &mdash; cardio, strength, free weights, flooring &mdash; within your budget. Contact us with your requirements for a complete package quotation.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="tFaq(this)">Where is Premier Rubbers located? <span class="faq-ico">&#8595;</span></button><div class="faq-a">C-4-5, Premier Rubber, Delhi Road, Sports Goods Complex, Meerut &ndash; 250002, UP, India. Call 08048958125 or visit fitbulls.co.in. Owner: Mr. Samyak Jain.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN -->
+<div id="pg-admin" class="pg">
+  <div id="admLogin" class="adm-login">
+    <div class="adm-card">
+      <div class="adm-title">FitBulls <span style="color:var(--red)">Admin</span></div>
+      <div class="adm-sub">Sign in to manage products and enquiries</div>
+      <form onsubmit="doLogin(event)">
+        <div class="fgrp"><label class="flabel">Username</label><input class="finput" id="aUsr" value="admin" required></div>
+        <div class="fgrp" style="margin-bottom:1.4rem"><label class="flabel">Password</label><input class="finput" id="aPwd" type="password" value="fitbulls2024" required></div>
+        <button class="btn-red btn-full" type="submit">Sign In &rarr;</button>
+        <div id="aErr" style="color:var(--red2);font-size:.78rem;margin-top:.75rem;display:none"></div>
+      </form>
+    </div>
+  </div>
+  <div id="admDash" class="adm-wrap" style="display:none">
+    <div class="adm-top">
+      <div class="adm-top-title">FitBulls <span>Admin</span></div>
+      <div style="display:flex;align-items:center;gap:.85rem">
+        <span style="font-size:.75rem;color:var(--gray)" id="aWho"></span>
+        <button class="btn-ghost btn-sm" onclick="G('home')">&#8592; Site</button>
+        <button class="btn-ghost btn-sm" onclick="doLogout()">Logout</button>
+      </div>
+    </div>
+    <div class="adm-body">
+      <div class="adm-side">
+        <div class="adm-side-title">Navigation</div>
+        <div class="adm-nav-item on" onclick="aPanel('dash')">&#128202; Dashboard</div>
+        <div class="adm-nav-item" onclick="aPanel('enqs')">&#128233; Enquiries</div>
+        <div class="adm-nav-item" onclick="aPanel('prods')">&#128230; Products</div>
+        <div class="adm-nav-item" onclick="aPanel('subs')">&#128231; Subscribers</div>
+      </div>
+      <div class="adm-content">
+        <div class="adm-panel on" id="ap-dash">
+          <div class="adm-sec-title">Dashboard <span>Overview</span></div>
+          <div class="stats-row" id="admStats"><div class="ldg"><div class="ring"></div></div></div>
+          <div style="font-family:var(--font-head);font-size:1rem;font-weight:700;margin-bottom:.85rem;color:var(--white)">Recent Enquiries</div>
+          <div class="tbl-wrap" id="dashEnqs"><div class="ldg"><div class="ring"></div></div></div>
+        </div>
+        <div class="adm-panel" id="ap-enqs"><div class="adm-sec-title">All <span>Enquiries</span></div><div class="tbl-wrap" id="allEnqs"><div class="ldg"><div class="ring"></div></div></div></div>
+        <div class="adm-panel" id="ap-prods"><div class="adm-sec-title">Product <span>Catalogue</span></div><div class="tbl-wrap" id="admProds"><div class="ldg"><div class="ring"></div></div></div></div>
+        <div class="adm-panel" id="ap-subs"><div class="adm-sec-title">Newsletter <span>Subscribers</span></div><div class="tbl-wrap" id="admSubs"><div class="ldg"><div class="ring"></div></div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ========== CORE ========== */
+async function req(url,opts={}){
+  try{
+    const r=await fetch(url,{headers:{'Content-Type':'application/json'},...opts});
+    return await r.json();
+  }catch(e){return{success:false,error:e.message};}
+}
+
+let _tt;
+function toast(title,msg,ms=3500){
+  document.getElementById('t-title').textContent=title;
+  document.getElementById('t-msg').textContent=msg||'';
+  const el=document.getElementById('toast');
+  el.classList.add('show');
+  clearTimeout(_tt);
+  _tt=setTimeout(()=>el.classList.remove('show'),ms);
+}
+
+/* ========== NAV / PAGE ========== */
+function G(name){
+  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
+  const pg=document.getElementById('pg-'+name);
+  if(pg){pg.classList.add('on');window.scrollTo({top:0,behavior:'smooth'});}
+  document.querySelectorAll('.nav-menu a').forEach(a=>a.classList.remove('on'));
+  const lnk=document.getElementById('nv-'+name);
+  if(lnk)lnk.classList.add('on');
+  cmob();
+  setTimeout(()=>{
+    rv();
+    if(name==='home')initHome();
+    if(name==='products')initProds();
+    if(name==='admin')initAdmin();
+  },60);
+}
+
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('stuck',scrollY>70);
+  document.getElementById('topbar').style.width=(scrollY/(document.body.scrollHeight-innerHeight)*100)+'%';
+});
+
+/* Hamburger */
+const hbg=document.getElementById('hbg'),mob=document.getElementById('mobNav');
+hbg.addEventListener('click',()=>{const o=mob.classList.toggle('on');hbg.classList.toggle('on',o);});
+function cmob(){mob.classList.remove('on');hbg.classList.remove('on');}
+
+/* Hero bg */
+setTimeout(()=>{const b=document.getElementById('heroBg');if(b)b.classList.add('go');},50);
+
+/* ========== SEARCH ========== */
+let _sd;
+document.getElementById('srchBtn').addEventListener('click',()=>{
+  const b=document.getElementById('srchBox');
+  b.classList.toggle('on');
+  if(b.classList.contains('on'))b.focus();
+  else{b.value='';document.getElementById('srchDrop').classList.remove('on');}
+});
+document.getElementById('srchBox').addEventListener('input',e=>{
+  clearTimeout(_sd);
+  const q=e.target.value.trim();
+  if(q.length<2){document.getElementById('srchDrop').classList.remove('on');return;}
+  _sd=setTimeout(async()=>{
+    const res=await req('/api/search?q='+encodeURIComponent(q));
+    const drop=document.getElementById('srchDrop');
+    if(!res.success||!res.data.length){
+      drop.innerHTML='<div style="padding:.85rem 1rem;font-size:.8rem;color:var(--gray)">No products found</div>';
+      drop.classList.add('on');return;
+    }
+    drop.innerHTML=res.data.map(p=>`
+      <div class="srch-row" onclick="loadPD('${p.slug}')">
+        <img src="${(p.images&&p.images[0])||''}" alt="${p.name}" onerror="this.style.display='none'">
+        <div><div class="srch-row-name">${p.name}</div><div class="srch-row-cat">${p.categoryName||''} ${p.modelCode?'&middot; '+p.modelCode:''}</div></div>
+      </div>`).join('');
+    drop.classList.add('on');
+  },280);
+});
+document.addEventListener('click',e=>{if(!e.target.closest('.nav-srch'))document.getElementById('srchDrop').classList.remove('on');});
+
+/* ========== REVEAL ========== */
+function rv(){
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach((en,i)=>{
+      if(en.isIntersecting){setTimeout(()=>en.target.classList.add('in'),i*55);io.unobserve(en.target);}
+    });
+  },{threshold:.08,rootMargin:'0px 0px -20px 0px'});
+  document.querySelectorAll('.rv:not(.in)').forEach(el=>io.observe(el));
+}
+rv();
+
+/* ========== FALLBACK IMAGES ========== */
+const FBIMGS=[
+  'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=85&fit=crop',
+  'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=85&fit=crop',
+  'https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=600&q=85&fit=crop',
+  'https://images.unsplash.com/photo-1581009137042-c552e485697a?w=600&q=85&fit=crop',
+  'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=600&q=85&fit=crop',
+  'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&q=85&fit=crop',
+  'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=600&q=85&fit=crop',
+];
+
+/* ========== PRODUCT CARD ========== */
+function pCard(p,i){
+  const img=(p.images&&p.images[0])||FBIMGS[i%FBIMGS.length];
+  const nm=p.name.replace(/'/g,"\'");
+  return `<div class="pcard rv" onclick="loadPD('${p.slug}')">
+    <div class="pcard-img">
+      <img src="${img}" alt="${p.name}" onerror="this.src='${FBIMGS[i%FBIMGS.length]}'">
+      <div class="pcard-badges">
+        ${p.bestseller?'<span class="bdg bdg-best">Bestseller</span>':''}
+        ${p.isNew?'<span class="bdg bdg-new">New</span>':''}
+      </div>
+      <div class="pcard-ov">
+        <button class="ov-view" onclick="event.stopPropagation();loadPD('${p.slug}')">View Details</button>
+        <button class="ov-quote" onclick="event.stopPropagation();openEnq('${p.id}','${nm}')">Request Quote</button>
+      </div>
+    </div>
+    <div class="pcard-body">
+      <div class="pcard-tag">${p.modelCode||p.categoryName||''}</div>
+      <div class="pcard-name">${p.name}</div>
+      <div class="pcard-desc">${p.shortDesc||''}</div>
+      <div class="pcard-foot">
+        <span class="pcard-price">${p.priceLabel||'Get Quote'}</span>
+        <span class="pcard-arr">&#8594;</span>
+      </div>
+    </div>
+  </div>`;
+}
+
+/* ========== HOME ========== */
+let homeLoaded=false;
+async function initHome(){
+  if(homeLoaded)return;
+  homeLoaded=true;
+  loadCats();
+  loadFeat();
+  loadTesti();
+}
+
+async function loadCats(){
+  const res=await req('/api/categories');
+  const g=document.getElementById('catsGrid');
+  if(!res.success||!res.data){g.innerHTML='<div class="no-items">Could not load categories</div>';return;}
+  const total=res.data.reduce((s,c)=>s+c.product_count,0);
+  g.innerHTML=res.data.map((c,i)=>`
+    <div class="cat-card" onclick="goCat('${c.slug}')" tabindex="0" role="button" aria-label="${c.name}">
+      <div class="cat-bg" style="background-image:url('${c.image||FBIMGS[i%FBIMGS.length]}')"></div>
+      <div class="cat-ov"></div>
+      <div class="cat-red"></div>
+      <div class="cat-body">
+        <span class="cat-ico">${c.icon||'&#128170;'}</span>
+        <div class="cat-name">${c.name}</div>
+        <div class="cat-count">${c.product_count} product${c.product_count!==1?'s':''}</div>
+        <span class="cat-go">Explore Now &#8594;</span>
+      </div>
+    </div>`).join('');
+  const n=document.getElementById('catsNote');
+  if(n)n.textContent=`${res.data.length} categories · ${total} total products`;
+  rv();
+}
+
+async function loadFeat(){
+  const res=await req('/api/products?featured=1&limit=8');
+  const g=document.getElementById('featGrid');
+  if(!res.success||!res.data){g.innerHTML='<div class="no-items">Could not load products</div>';return;}
+  if(!res.data.length){g.innerHTML='<div class="no-items">No featured products</div>';return;}
+  g.innerHTML=res.data.map((p,i)=>pCard(p,i)).join('');
+  rv();
+}
+
+/* ========== TESTIMONIALS ========== */
+let tI=0,tN=0,tTimer;
+async function loadTesti(){
+  const res=await req('/api/testimonials');
+  if(!res.success||!res.data||!res.data.length)return;
+  const track=document.getElementById('testiTrack');
+  const dots=document.getElementById('testiDots');
+  tN=res.data.length;
+  track.innerHTML=res.data.map(t=>`
+    <div class="testi-card">
+      <div class="testi-left">
+        <div class="testi-qmark">"</div>
+        <div class="testi-stars">${'&#9733;'.repeat(t.rating)}</div>
+        <div class="testi-quote">${t.review}</div>
+        <div class="testi-person">
+          <div class="testi-av">${t.name.charAt(0)}</div>
+          <div><div class="testi-name">${t.name}</div><div class="testi-role">${t.role} &middot; ${t.city}</div></div>
+        </div>
+      </div>
+      <div class="testi-score">
+        <div class="testi-score-n">${t.rating}.0</div>
+        <div class="testi-score-s">${'&#9733;'.repeat(t.rating)}</div>
+        <div class="testi-score-l">Rating</div>
+      </div>
+    </div>`).join('');
+  dots.innerHTML=res.data.map((_,i)=>`<div class="tdot${i===0?' on':''}" onclick="goT(${i})"></div>`).join('');
+  clearInterval(tTimer);
+  tTimer=setInterval(()=>{tI=(tI+1)%tN;applyT();},5500);
+}
+function mvT(d){tI=(tI+d+tN)%tN;applyT();}
+function goT(i){tI=i;applyT();}
+function applyT(){
+  const t=document.getElementById('testiTrack');
+  if(t)t.style.transform=`translateX(-${tI*100}%)`;
+  document.querySelectorAll('.tdot').forEach((d,i)=>d.classList.toggle('on',i===tI));
+}
+
+/* ========== PRODUCTS PAGE ========== */
+let catData=[],curCat='';
+async function initProds(){
+  if(!catData.length){
+    const res=await req('/api/categories');
+    if(res.success&&res.data){
+      catData=res.data;
+      const w=document.getElementById('fCatList');
+      if(w){
+        w.innerHTML=`<label class="foption"><input type="radio" name="cat" value="" ${curCat===''?'checked':''} onchange="doFilter()"><span>All Products</span></label>`
+          +catData.map(c=>`<label class="foption"><input type="radio" name="cat" value="${c.slug}" ${curCat===c.slug?'checked':''} onchange="doFilter()"><span>${c.name} (${c.product_count})</span></label>`).join('');
+      }
+    }
+  }
+  doFilter();
+}
+
+async function doFilter(){
+  const g=document.getElementById('prodGrid');
+  const cnt=document.getElementById('prodCount');
+  if(!g)return;
+  g.innerHTML='<div class="ldg"><div class="ring"></div></div>';
+  const cat=(document.querySelector('input[name="cat"]:checked')||{}).value||'';
+  const ff=document.getElementById('ff')?.checked?'&featured=1':'';
+  const fb=document.getElementById('fb')?.checked?'&bestseller=1':'';
+  const fn=document.getElementById('fn')?.checked?'&isNew=1':'';
+  const res=await req(`/api/products?limit=100${cat?'&category='+cat:''}${ff}${fb}${fn}`);
+  if(!res.success||!res.data){
+    g.innerHTML='<div class="no-items">Failed to load products. Make sure the server is running.</div>';
+    return;
+  }
+  if(!res.data.length){
+    g.innerHTML='<div class="no-items">No products match these filters</div>';
+    if(cnt)cnt.textContent='0 products';
+    return;
+  }
+  g.innerHTML=res.data.map((p,i)=>pCard(p,i)).join('');
+  if(cnt)cnt.innerHTML=`Showing <strong>${res.data.length}</strong> of ${res.total} products`;
+  rv();
+}
+
+function goCat(slug){
+  curCat=slug;
+  G('products');
+  setTimeout(()=>{
+    const r=document.querySelector(`input[name="cat"][value="${slug}"]`);
+    if(r){r.checked=true;}
+    doFilter();
+  },180);
+}
+
+/* ========== PRODUCT DETAIL ========== */
+async function loadPD(slug){
+  G('product-detail');
+  const cont=document.getElementById('pdContent');
+  const relG=document.getElementById('relGrid');
+  cont.innerHTML='<div class="ldg" style="height:60vh"><div class="ring"></div></div>';
+  relG.innerHTML='';
+  const res=await req('/api/products/'+slug);
+  if(!res.success||!res.data){
+    cont.innerHTML='<div class="no-items">Product not found</div>';
+    return;
+  }
+  const p=res.data;
+  const specs=p.specs&&typeof p.specs==='object'?p.specs:{};
+  const imgs=p.images&&p.images.length?p.images:[FBIMGS[0]];
+  const main=imgs[0];
+
+  // Build multiple thumb images for gallery
+  // Use same image with slight variation if only 1
+  const thumbImgs=imgs.length>=3?imgs:[imgs[0],imgs[0],imgs[0]].slice(0,3);
+
+  cont.innerHTML=`<div class="pd-layout">
+    <div>
+      <div class="pd-main-img" id="pdMainWrap"><img id="pdMainImg" src="${main}" alt="${p.name}" onerror="this.src='${FBIMGS[0]}'"></div>
+      <div class="pd-thumbs">
+        ${thumbImgs.map((im,i)=>`<div class="pd-thumb${i===0?' on':''}" onclick="swImg(${i},'${im}')"><img src="${im}" alt="View ${i+1}" onerror="this.style.display='none'"></div>`).join('')}
+      </div>
+    </div>
+    <div class="pd-info">
+      <div class="pd-cat">${p.categoryName||''}</div>
+      <h1 class="pd-name">${p.name}</h1>
+      <div class="pd-model">${p.modelCode||''}</div>
+      <div class="pd-stock">In Stock &middot; Ships Pan-India</div>
+      <div class="pd-box">
+        <div class="pd-box-label">Pricing</div>
+        <div class="pd-box-note">We manufacture to order. Pricing is based on quantity, specifications and delivery location. Get a custom quote within 24 hours.</div>
+        <button class="btn-red btn-full" onclick="openEnq('${p.id}','${p.name.replace(/'/g,"\'")}')">Request a Quote &rarr;</button>
+      </div>
+      <div class="pd-tabs">
+        <button class="pd-tab on" onclick="swTab(this,'pt-ov')">Overview</button>
+        <button class="pd-tab" onclick="swTab(this,'pt-sp')">Specifications</button>
+        <button class="pd-tab" onclick="swTab(this,'pt-sh')">Shipping &amp; Export</button>
+      </div>
+      <div id="pt-ov" class="pd-panel on"><p>${p.description||p.shortDesc||'High-quality gym equipment by Premier Rubbers, Meerut.'}</p></div>
+      <div id="pt-sp" class="pd-panel">
+        <table class="spec-table">
+          ${Object.entries(specs).map(([k,v])=>`<tr><td>${k}</td><td>${v}</td></tr>`).join('')}
+          ${!Object.keys(specs).length?'<tr><td colspan="2" style="color:var(--gray)">Contact us for detailed specifications.</td></tr>':''}
+        </table>
+      </div>
+      <div id="pt-sh" class="pd-panel">
+        <p>&#128666; <strong style="color:#fff">Pan-India Delivery</strong> &mdash; dispatch from Meerut via trusted logistics. Timeline depends on quantity and destination.</p>
+        <p>&#128230; <strong style="color:#fff">Bulk &amp; Wholesale</strong> &mdash; volume pricing and priority handling for commercial gym setups and distributors.</p>
+        <p>&#127760; <strong style="color:#fff">International Export</strong> &mdash; active exporter. Contact us with country, products and quantities for export pricing and MOQ.</p>
+      </div>
+    </div>
+  </div>`;
+
+  if(res.related&&res.related.length){
+    relG.innerHTML=res.related.map((rp,i)=>pCard(rp,i)).join('');
+  } else {
+    relG.innerHTML='<div class="no-items">No related products found</div>';
+  }
+  rv();
+}
+
+function swImg(i,src){
+  document.getElementById('pdMainImg').src=src;
+  document.querySelectorAll('.pd-thumb').forEach((t,j)=>t.classList.toggle('on',i===j));
+}
+function swTab(btn,id){
+  document.querySelectorAll('.pd-tab').forEach(b=>b.classList.remove('on'));
+  document.querySelectorAll('.pd-panel').forEach(p=>p.classList.remove('on'));
+  btn.classList.add('on');
+  document.getElementById(id)?.classList.add('on');
+}
+
+function openEnq(id,name){
+  G('contact');
+  setTimeout(()=>{
+    const msg=document.querySelector('#enqForm textarea[name="message"]');
+    const typ=document.querySelector('#enqForm select[name="enquiryType"]');
+    if(msg)msg.value=`I am interested in: ${name}
+
+Please share pricing and availability.`;
+    if(typ)typ.value='product';
+    document.getElementById('enqForm').dataset.pid=id;
+  },280);
+}
+
+/* ========== FORMS ========== */
+async function doEnq(e){
+  e.preventDefault();
+  const btn=document.getElementById('enqBtn');
+  btn.textContent='Sending…';btn.disabled=true;
+  const form=e.target;
+  const data=Object.fromEntries(new FormData(form).entries());
+  data.productId=form.dataset.pid||null;
+  const res=await req('/api/enquiries',{method:'POST',body:JSON.stringify(data)});
+  btn.textContent='Send Enquiry →';btn.disabled=false;
+  if(res.success){toast('✅ Enquiry Sent!',res.message);form.reset();delete form.dataset.pid;}
+  else toast('❌ Error',res.error||'Please try again.');
+}
+async function doNL(e){
+  e.preventDefault();
+  const res=await req('/api/newsletter',{method:'POST',body:JSON.stringify({email:document.getElementById('nlEmail').value,name:document.getElementById('nlName').value})});
+  if(res.success){toast('✅ Subscribed!',res.message);e.target.reset();}
+  else toast('❌ Error',res.error);
+}
+
+/* ========== FAQ ========== */
+function tFaq(btn){
+  const it=btn.closest('.faq-item'),was=it.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('open'));
+  if(!was)it.classList.add('open');
+}
+
+/* ========== ADMIN ========== */
+let aTok=localStorage.getItem('fb_t'),aWho=localStorage.getItem('fb_u');
+function initAdmin(){
+  if(aTok&&aWho){showDash();}
+  else{document.getElementById('admLogin').style.display='flex';document.getElementById('admDash').style.display='none';}
+}
+async function doLogin(e){
+  e.preventDefault();
+  const res=await req('/api/admin/login',{method:'POST',body:JSON.stringify({username:document.getElementById('aUsr').value,password:document.getElementById('aPwd').value})});
+  if(res.success){
+    aTok=res.token;aWho=res.user.username;
+    localStorage.setItem('fb_t',aTok);localStorage.setItem('fb_u',aWho);
+    showDash();
+  } else {
+    const err=document.getElementById('aErr');err.textContent=res.error||'Invalid credentials';err.style.display='block';
+  }
+}
+function showDash(){
+  document.getElementById('admLogin').style.display='none';
+  document.getElementById('admDash').style.display='block';
+  const w=document.getElementById('aWho');if(w)w.textContent='Logged in as '+aWho;
+  loadDashStats();
+}
+function doLogout(){
+  localStorage.removeItem('fb_t');localStorage.removeItem('fb_u');aTok=null;aWho=null;
+  document.getElementById('admLogin').style.display='flex';
+  document.getElementById('admDash').style.display='none';
+}
+function aPanel(n){
+  document.querySelectorAll('.adm-panel').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.adm-nav-item').forEach(ni=>ni.classList.remove('on'));
+  document.getElementById('ap-'+n)?.classList.add('on');
+  document.querySelector(`.adm-nav-item[onclick*="'${n}'"]`)?.classList.add('on');
+  if(n==='enqs')loadAllEnqs();
+  if(n==='prods')loadAdmProds();
+  if(n==='subs')loadAdmSubs();
+}
+async function loadDashStats(){
+  const res=await req('/api/admin/stats');
+  if(!res.success)return;
+  const d=res.data;
+  document.getElementById('admStats').innerHTML=`
+    <div class="stat-card"><div class="stat-card-n">${d.products}</div><div class="stat-card-l">Total Products</div></div>
+    <div class="stat-card"><div class="stat-card-n">${d.categories}</div><div class="stat-card-l">Categories</div></div>
+    <div class="stat-card hi"><div class="stat-card-n red">${d.newEnquiries}</div><div class="stat-card-l">New Enquiries</div></div>
+    <div class="stat-card"><div class="stat-card-n">${d.subscribers}</div><div class="stat-card-l">Subscribers</div></div>`;
+  const rec=d.recentEnquiries||[];
+  document.getElementById('dashEnqs').innerHTML=rec.length?enqTbl(rec):'<div style="padding:2rem;text-align:center;color:var(--gray);font-size:.85rem">No enquiries yet</div>';
+}
+function enqTbl(rows){
+  return`<table class="dtbl"><thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Type</th><th>City</th><th>Status</th><th>Date</th><th>Update</th></tr></thead><tbody>
+  ${rows.map(e=>`<tr>
+    <td style="color:#fff;font-weight:600">${e.name}</td>
+    <td>${e.email}</td>
+    <td>${e.phone||'&mdash;'}</td>
+    <td style="text-transform:capitalize">${(e.enquiryType||'general').replace(/-/g,' ')}</td>
+    <td>${e.city||'&mdash;'}</td>
+    <td><span class="spill s-${e.status}">${e.status}</span></td>
+    <td style="font-size:.72rem;white-space:nowrap">${new Date(e.createdAt).toLocaleDateString('en-IN')}</td>
+    <td><select class="st-sel" onchange="updEnq('${e.id}',this.value)">
+      <option value="new"${e.status==='new'?' selected':''}>New</option>
+      <option value="read"${e.status==='read'?' selected':''}>Read</option>
+      <option value="resolved"${e.status==='resolved'?' selected':''}>Resolved</option>
+    </select></td>
+  </tr>`).join('')}
+  </tbody></table>`;
+}
+async function loadAllEnqs(){
+  const w=document.getElementById('allEnqs');
+  w.innerHTML='<div class="ldg"><div class="ring"></div></div>';
+  const res=await req('/api/admin/enquiries');
+  w.innerHTML=res.success&&res.data.length?enqTbl(res.data):'<div style="padding:2rem;text-align:center;color:var(--gray);font-size:.85rem">No enquiries yet. They appear here when customers submit the contact form.</div>';
+}
+async function updEnq(id,status){
+  await req('/api/admin/enquiries/'+id,{method:'PATCH',body:JSON.stringify({status})});
+  toast('✅ Updated','Status changed to '+status);
+}
+async function loadAdmProds(){
+  const w=document.getElementById('admProds');
+  w.innerHTML='<div class="ldg"><div class="ring"></div></div>';
+  const res=await req('/api/products?limit=100');
+  if(!res.success){w.innerHTML='<div style="padding:2rem;text-align:center;color:var(--gray)">Failed to load</div>';return;}
+  w.innerHTML=`<table class="dtbl"><thead><tr><th>Name</th><th>Model</th><th>Category</th><th>Featured</th><th>Bestseller</th><th>New</th></tr></thead><tbody>
+  ${res.data.map(p=>`<tr onclick="loadPD('${p.slug}')" style="cursor:pointer">
+    <td style="color:#fff;font-weight:600">${p.name}</td>
+    <td style="color:var(--red);font-size:.74rem">${p.modelCode||'&mdash;'}</td>
+    <td>${p.categoryName||''}</td>
+    <td>${p.featured?'<span class="spill s-new">Yes</span>':'&mdash;'}</td>
+    <td>${p.bestseller?'<span class="spill s-new">Yes</span>':'&mdash;'}</td>
+    <td>${p.isNew?'<span class="spill s-read">New</span>':'&mdash;'}</td>
+  </tr>`).join('')}
+  </tbody></table>`;
+}
+async function loadAdmSubs(){
+  const w=document.getElementById('admSubs');
+  w.innerHTML='<div class="ldg"><div class="ring"></div></div>';
+  const res=await req('/api/admin/subscribers');
+  if(!res.success){w.innerHTML='<div style="padding:2rem;text-align:center;color:var(--gray)">Failed to load</div>';return;}
+  w.innerHTML=res.data.length
+    ?`<table class="dtbl"><thead><tr><th>Name</th><th>Email</th><th>Subscribed</th></tr></thead><tbody>${res.data.map(s=>`<tr><td>${s.name||'&mdash;'}</td><td style="color:#fff">${s.email}</td><td style="font-size:.72rem">${new Date(s.createdAt).toLocaleDateString('en-IN')}</td></tr>`).join('')}</tbody></table>`
+    :'<div style="padding:2rem;text-align:center;color:var(--gray);font-size:.85rem">No subscribers yet</div>';
+}
+
+/* ========== INIT ========== */
+initHome();
+</script>
+</body>
+</html>

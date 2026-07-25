@@ -1,0 +1,859 @@
+{
+  "categories": [
+    {
+      "id": "cat-01",
+      "slug": "dumbbells",
+      "name": "Dumbbells",
+      "description": "Bouncer, Hexagon, MS Powder Coated, Fan, Arc, Vinyl, Chrome, Y-Cut, Spiral",
+      "icon": "\ud83d\udcaa",
+      "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=85&fit=crop",
+      "sort": 1
+    },
+    {
+      "id": "cat-02",
+      "slug": "weight-lifting-plates",
+      "name": "Weight Lifting Plates",
+      "description": "7 Hole, Captain America, Bumper, Fan, Arc, Batman, Cast Iron, 3-Cut Double Color",
+      "icon": "\u2696\ufe0f",
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=85&fit=crop",
+      "sort": 2
+    },
+    {
+      "id": "cat-03",
+      "slug": "phantom-series",
+      "name": "Phantom Series",
+      "description": "FPS range \u2014 15 premium commercial selectorized machines",
+      "icon": "\ud83c\udfed",
+      "image": "https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=800&q=85&fit=crop",
+      "sort": 3
+    },
+    {
+      "id": "cat-04",
+      "slug": "rogue-series",
+      "name": "Rogue Series",
+      "description": "FRS range \u2014 15 commercial gym machines",
+      "icon": "\ud83d\udd29",
+      "image": "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=800&q=85&fit=crop",
+      "sort": 4
+    },
+    {
+      "id": "cat-05",
+      "slug": "fld-series",
+      "name": "FLD Series",
+      "description": "FLD commercial machines \u2014 versatile and robust",
+      "icon": "\ud83c\udfd7\ufe0f",
+      "image": "https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&q=85&fit=crop",
+      "sort": 5
+    },
+    {
+      "id": "cat-06",
+      "slug": "plate-loaded-series",
+      "name": "Plate Loaded Series",
+      "description": "TA range \u2014 Rear Kick, Pull Down, Hack Squat, Shoulder Press",
+      "icon": "\ud83c\udfaf",
+      "image": "https://images.unsplash.com/photo-1533681904393-9ab6eee7e408?w=800&q=85&fit=crop",
+      "sort": 6
+    },
+    {
+      "id": "cat-07",
+      "slug": "rigs-and-racks",
+      "name": "Rigs & Racks",
+      "description": "Power cages, squat racks, Smith machines, functional rigs",
+      "icon": "\ud83c\udfc6",
+      "image": "https://images.unsplash.com/photo-1581009137042-c552e485697a?w=800&q=85&fit=crop",
+      "sort": 7
+    },
+    {
+      "id": "cat-08",
+      "slug": "cardio",
+      "name": "Cardio Equipment",
+      "description": "Spin Bikes FBS range, Elliptical Trainers, Air Bikes",
+      "icon": "\ud83c\udfc3",
+      "image": "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&q=85&fit=crop",
+      "sort": 8
+    },
+    {
+      "id": "cat-09",
+      "slug": "weight-lifting-rods",
+      "name": "Weight Lifting Rods",
+      "description": "Olympic rods, standard rods, hex trap bars, fixed barbells",
+      "icon": "\ud83e\udd47",
+      "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&q=85&fit=crop",
+      "sort": 9
+    },
+    {
+      "id": "cat-10",
+      "slug": "indian-gym-equipment",
+      "name": "Indian Gym Equipment",
+      "description": "Leg curl extension, power cage, deadlift platform, Synergy 360",
+      "icon": "\ud83c\uddee\ud83c\uddf3",
+      "image": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=85&fit=crop",
+      "sort": 10
+    }
+  ],
+  "products": [
+    {
+      "id": "p-001",
+      "categoryId": "cat-01",
+      "slug": "fitbulls-bouncer-dumbbell",
+      "name": "FitBulls Bouncer Dumbbell",
+      "modelCode": "BOUND-DB",
+      "featured": true,
+      "bestseller": true,
+      "isNew": false,
+      "shortDesc": "Unisex vinyl-coated cast iron \u2014 ideal for home and gym workouts",
+      "description": "A pair of unisex vinyl dumbbells ideal for women and beginners. Superior quality cast iron topped with a smooth vinyl coating provides an anti-slip grip and prevents damage to the floor. Ergonomic and compact design makes it great for home workouts.",
+      "specs": {
+        "Material": "Cast Iron + Vinyl Coating",
+        "Weights": "1 kg to 25 kg pairs",
+        "Grip": "Anti-slip vinyl",
+        "Finish": "Smooth vinyl coating",
+        "Use": "Home & Commercial Gym",
+        "Max User Weight": "180 kg"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "dumbbell",
+        "vinyl",
+        "home gym",
+        "beginners"
+      ],
+      "sort": 1
+    },
+    {
+      "id": "p-002",
+      "categoryId": "cat-01",
+      "slug": "fitbulls-hexagon-rubber-dumbbell",
+      "name": "FitBulls Hexagon Rubber Dumbbell",
+      "modelCode": "HEX-RB",
+      "featured": true,
+      "bestseller": true,
+      "isNew": false,
+      "shortDesc": "Hex design prevents rolling \u2014 rubber coated, commercial grade",
+      "description": "The Hex Dumbbells are a durable and versatile free weights solution. Their unique hexagonal design prevents rolling, while the rubber coating protects flooring and reduces noise, making them reliable for any gym or training space.",
+      "specs": {
+        "Material": "Cast Iron + Rubber Coating",
+        "Shape": "Hexagonal anti-roll",
+        "Weights": "2 kg to 50 kg pairs",
+        "Handle": "Knurled chrome steel",
+        "Finish": "Rubber coated",
+        "Use": "Commercial & Home Gym",
+        "Max User Weight": "180 kg"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "dumbbell",
+        "hex",
+        "rubber",
+        "commercial"
+      ],
+      "sort": 2
+    },
+    {
+      "id": "p-003",
+      "categoryId": "cat-01",
+      "slug": "fitbulls-ms-powder-coated-dumbbell",
+      "name": "MS Powder Coated Dumbbell",
+      "modelCode": "MS-PC",
+      "featured": false,
+      "bestseller": false,
+      "isNew": false,
+      "shortDesc": "Mild steel powder coated \u2014 long-lasting industrial finish",
+      "description": "Mild steel construction with a durable powder coat finish provides resistance to rust and chipping, ensuring long service life in commercial environments.",
+      "specs": {
+        "Material": "Mild Steel",
+        "Finish": "Powder Coated",
+        "Weights": "2 kg to 50 kg",
+        "Use": "Commercial & Home Gym",
+        "Max User Weight": "180 kg"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "dumbbell",
+        "steel",
+        "commercial"
+      ],
+      "sort": 3
+    },
+    {
+      "id": "p-004",
+      "categoryId": "cat-01",
+      "slug": "fitbulls-chrome-dumbbell",
+      "name": "FitBulls Chrome Dumbbell",
+      "modelCode": "CHR-DB",
+      "featured": false,
+      "bestseller": false,
+      "isNew": false,
+      "shortDesc": "Sleek chrome finish \u2014 perfect for studio and luxury gyms",
+      "description": "Chrome dumbbells offer a sleek, compact design ideal for home environments and premium fitness studios. Chrome plated finish is both attractive and durable.",
+      "specs": {
+        "Material": "Solid Steel",
+        "Finish": "Chrome Plated",
+        "Weights": "1 kg to 30 kg",
+        "Handle": "Knurled grip",
+        "Use": "Home & Studio Gym",
+        "Max User Weight": "180 kg"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "dumbbell",
+        "chrome",
+        "luxury"
+      ],
+      "sort": 4
+    },
+    {
+      "id": "p-005",
+      "categoryId": "cat-01",
+      "slug": "fitbulls-arc-dumbbell",
+      "name": "FitBulls Arc Dumbbell",
+      "modelCode": "ARC-DB",
+      "featured": false,
+      "bestseller": false,
+      "isNew": true,
+      "shortDesc": "Curved arc design \u2014 ergonomic grip, modern aesthetic",
+      "description": "FitBulls Arc Dumbbells combine a distinctive curved design with functional ergonomics. The arc shape allows a more natural wrist position, reducing strain during high-rep sets.",
+      "specs": {
+        "Material": "Cast Iron + Rubber Coating",
+        "Design": "Arc Curved",
+        "Weights": "2 kg to 40 kg",
+        "Handle": "Ergonomic knurled steel",
+        "Use": "Home & Commercial Gym",
+        "Max User Weight": "180 kg"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "dumbbell",
+        "arc",
+        "ergonomic"
+      ],
+      "sort": 5
+    },
+    {
+      "id": "p-006",
+      "categoryId": "cat-02",
+      "slug": "7-hole-weight-lifting-plate",
+      "name": "7 Hole Weight Lifting Plate",
+      "modelCode": "WLP-7H",
+      "featured": true,
+      "bestseller": true,
+      "isNew": false,
+      "shortDesc": "Classic 7-hole rubber-coated plate \u2014 Olympic compatible",
+      "description": "A 7 Hole Weight Lifting Plate used in combination with barbells or dumbbells. Rubber-coated construction protects flooring and reduces noise. Compatible with all standard 50mm Olympic barbells.",
+      "specs": {
+        "Material": "Cast Iron + Rubber Coating",
+        "Hole Pattern": "7 Hole",
+        "Diameter": "50mm Olympic standard",
+        "Available Weights": "1.25 kg to 25 kg",
+        "Use": "Commercial & Home Gym",
+        "Max User Weight": "180 kg"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "plates",
+        "rubber",
+        "olympic"
+      ],
+      "sort": 1
+    },
+    {
+      "id": "p-007",
+      "categoryId": "cat-02",
+      "slug": "fitbulls-captain-america-plates",
+      "name": "Captain America TPR Plates",
+      "modelCode": "CA-TPR",
+      "featured": true,
+      "bestseller": false,
+      "isNew": false,
+      "shortDesc": "TPR-coated decorative plates \u2014 premium look for modern gyms",
+      "description": "Fitbulls TPR Coated Captain America Plates feature a distinctive shield-inspired design with premium TPR coating for aesthetic appeal and durable protection.",
+      "specs": {
+        "Material": "Cast Iron + TPR Coating",
+        "Design": "Captain America Shield",
+        "Diameter": "50mm Olympic standard",
+        "Available Weights": "5 kg to 25 kg",
+        "Use": "Commercial & Home Gym",
+        "Max User Weight": "180 kg"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "plates",
+        "TPR",
+        "design"
+      ],
+      "sort": 2
+    },
+    {
+      "id": "p-008",
+      "categoryId": "cat-02",
+      "slug": "fitbulls-bumper-plate",
+      "name": "FitBulls Bumper Plate With Hub",
+      "modelCode": "BMP-HUB",
+      "featured": false,
+      "bestseller": true,
+      "isNew": false,
+      "shortDesc": "Drop-safe bumper plates \u2014 ideal for Olympic weightlifting",
+      "description": "FitBulls Bumper Plates protect you, your barbell, and your floors during heavy lifting. Essential for Olympic lifts including snatch and clean and jerk.",
+      "specs": {
+        "Material": "Virgin Rubber + Steel Hub",
+        "Design": "Full rubber bumper",
+        "Diameter": "450mm standard",
+        "Available Weights": "5 kg to 25 kg",
+        "Use": "Olympic Lifting & CrossFit",
+        "Max User Weight": "180 kg"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1642914091913-9e7c8a80f27a?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "plates",
+        "bumper",
+        "olympic"
+      ],
+      "sort": 3
+    },
+    {
+      "id": "p-009",
+      "categoryId": "cat-03",
+      "slug": "fps-e6804-pull-down",
+      "name": "FPS E6804 Pull Down",
+      "modelCode": "FPS E6804",
+      "featured": true,
+      "bestseller": true,
+      "isNew": false,
+      "shortDesc": "Commercial lat pull down \u2014 smooth cable, heavy gauge steel",
+      "description": "The FPS E6804 Phantom Series Pull Down is a premium commercial lat pull-down machine built for high-volume gym use. Features a smooth high-tensile cable system and multiple grip attachment points.",
+      "specs": {
+        "Model": "FPS E6804",
+        "Series": "Phantom Series",
+        "Frame": "Heavy gauge steel powder coated",
+        "Cable": "High-tensile steel",
+        "Attachments": "Multi-grip lat bar and close grip handle",
+        "Max User Weight": "180 kg",
+        "Use": "Commercial Gym"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "phantom",
+        "lat pulldown",
+        "commercial"
+      ],
+      "sort": 1
+    },
+    {
+      "id": "p-010",
+      "categoryId": "cat-03",
+      "slug": "fps-6806-horizontal-pull",
+      "name": "FPS 6806 Horizontal Pull",
+      "modelCode": "FPS 6806",
+      "featured": false,
+      "bestseller": false,
+      "isNew": false,
+      "shortDesc": "Seated cable row \u2014 targets mid and lower back",
+      "description": "The FPS 6806 Phantom Series Horizontal Pull activates the back muscles through a horizontal pulling motion. The chest pad ensures stable and comfortable support throughout the movement.",
+      "specs": {
+        "Model": "FPS 6806",
+        "Series": "Phantom Series",
+        "Frame": "Heavy gauge steel",
+        "Motion": "Horizontal cable pull",
+        "Seat": "Adjustable padded seat",
+        "Max User Weight": "180 kg",
+        "Use": "Commercial Gym"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1638536532686-d610adfc8e5c?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "phantom",
+        "row",
+        "back"
+      ],
+      "sort": 2
+    },
+    {
+      "id": "p-011",
+      "categoryId": "cat-03",
+      "slug": "fps-e6861-abductor-adductor",
+      "name": "FPS E6861 Abductor Adductor",
+      "modelCode": "FPS E6861",
+      "featured": false,
+      "bestseller": false,
+      "isNew": false,
+      "shortDesc": "Dual-function hip machine \u2014 abductor and adductor in one",
+      "description": "The FPS E6861 is a dual-function hip abductor and adductor machine targeting outer and inner thigh muscles. Padded seat and back support ensure user comfort.",
+      "specs": {
+        "Model": "FPS E6861",
+        "Series": "Phantom Series",
+        "Function": "Hip Abductor and Adductor",
+        "Frame": "Heavy gauge steel",
+        "Max User Weight": "180 kg",
+        "Use": "Commercial Gym"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "phantom",
+        "abductor",
+        "legs"
+      ],
+      "sort": 3
+    },
+    {
+      "id": "p-012",
+      "categoryId": "cat-04",
+      "slug": "frs-6704-pull-down",
+      "name": "FRS 6704 Pull Down",
+      "modelCode": "FRS 6704",
+      "featured": true,
+      "bestseller": true,
+      "isNew": false,
+      "shortDesc": "Rogue Series selectorized lat pull down \u2014 commercial grade",
+      "description": "The FRS 6704 Rogue Series Pull Down provides smooth, consistent resistance through a high-quality cable and pulley system. Built with commercial-grade steel for high-traffic gym environments.",
+      "specs": {
+        "Model": "FRS 6704",
+        "Series": "Rogue Series",
+        "Frame": "Commercial grade steel",
+        "Cable": "High-tensile selectorized",
+        "Max User Weight": "180 kg",
+        "Use": "Commercial Gym"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "rogue",
+        "lat pulldown",
+        "selectorized"
+      ],
+      "sort": 1
+    },
+    {
+      "id": "p-013",
+      "categoryId": "cat-04",
+      "slug": "frs-6738-pec-dec",
+      "name": "FRS 6738 Pec Dec",
+      "modelCode": "FRS 6738",
+      "featured": false,
+      "bestseller": false,
+      "isNew": false,
+      "shortDesc": "Pec deck fly machine \u2014 isolated chest training",
+      "description": "The FRS 6738 Rogue Series Pec Dec provides isolated chest fly movement. Adjustable arm pads and seat height accommodate users of all sizes.",
+      "specs": {
+        "Model": "FRS 6738",
+        "Series": "Rogue Series",
+        "Function": "Pec Dec Chest Fly",
+        "Adjustment": "Seat and arm pad height",
+        "Max User Weight": "180 kg",
+        "Use": "Commercial Gym"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "rogue",
+        "pec dec",
+        "chest"
+      ],
+      "sort": 2
+    },
+    {
+      "id": "p-014",
+      "categoryId": "cat-06",
+      "slug": "ta-40-rear-kick",
+      "name": "TA 40 Rear Kick",
+      "modelCode": "TA 40",
+      "featured": false,
+      "bestseller": false,
+      "isNew": false,
+      "shortDesc": "Plate-loaded rear kick \u2014 glute and hamstring isolation",
+      "description": "The TA 40 Rear Kick is a plate-loaded machine for isolated glute and hamstring training. Allows progressive overloading without weight stack limitations.",
+      "specs": {
+        "Model": "TA 40",
+        "Series": "Plate Loaded",
+        "Function": "Rear Kick",
+        "Loading": "Olympic plates 50mm",
+        "Max User Weight": "180 kg"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1533681904393-9ab6eee7e408?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "plate loaded",
+        "rear kick",
+        "glutes"
+      ],
+      "sort": 1
+    },
+    {
+      "id": "p-015",
+      "categoryId": "cat-06",
+      "slug": "ta-45-hack-squat",
+      "name": "TA 45 Hack Squat",
+      "modelCode": "TA 45",
+      "featured": false,
+      "bestseller": true,
+      "isNew": false,
+      "shortDesc": "45 degree hack squat \u2014 plate loaded compound leg machine",
+      "description": "The TA 45 Hack Squat provides excellent lower body compound movement targeting quads, hamstrings and glutes at a 45-degree angle for natural biomechanical movement.",
+      "specs": {
+        "Model": "TA 45",
+        "Series": "Plate Loaded",
+        "Function": "Hack Squat",
+        "Angle": "45 degrees",
+        "Loading": "Olympic plates 50mm",
+        "Max User Weight": "180 kg"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1532029837206-abbe2b7620e3?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "plate loaded",
+        "hack squat",
+        "legs"
+      ],
+      "sort": 2
+    },
+    {
+      "id": "p-016",
+      "categoryId": "cat-07",
+      "slug": "power-cage-rack",
+      "name": "FitBulls Power Cage Rack",
+      "modelCode": "PCR-PRO",
+      "featured": true,
+      "bestseller": true,
+      "isNew": false,
+      "shortDesc": "Heavy-duty power cage \u2014 squat, bench, pull-up all-in-one",
+      "description": "A Power Cage functions as a mechanical spotter for free weight barbell exercises without movement restrictions. Built with heavy-gauge steel for maximum safety and longevity.",
+      "specs": {
+        "Frame": "Heavy gauge steel powder coated",
+        "Attachments": "Pull-up bar J-cups safety arms dip bars",
+        "Footprint": "120 cm x 120 cm approx",
+        "Height": "Up to 230 cm",
+        "Max User Weight": "180 kg",
+        "Use": "Commercial & Home Gym"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1581009137042-c552e485697a?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "rack",
+        "power cage",
+        "squat"
+      ],
+      "sort": 1
+    },
+    {
+      "id": "p-017",
+      "categoryId": "cat-07",
+      "slug": "fitbulls-smith-machine",
+      "name": "FitBulls Smith Machine",
+      "modelCode": "SMT-PRO",
+      "featured": false,
+      "bestseller": false,
+      "isNew": false,
+      "shortDesc": "Commercial Smith machine \u2014 linear bearing guided barbell",
+      "description": "FitBulls Smith Machine is most suitable for chest and shoulder workout in a single station. Multiple linear bearings make it easy for any height user.",
+      "specs": {
+        "Frame": "Heavy gauge steel",
+        "Guide": "Linear bearing smooth track",
+        "Adjustment": "Multi-position seat and safety hooks",
+        "Max User Weight": "180 kg",
+        "Use": "Commercial Gym"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "smith machine",
+        "commercial",
+        "chest"
+      ],
+      "sort": 2
+    },
+    {
+      "id": "p-018",
+      "categoryId": "cat-08",
+      "slug": "fbs-902-spin-bike",
+      "name": "FBS 902 Spin Bike",
+      "modelCode": "FBS 902",
+      "featured": false,
+      "bestseller": true,
+      "isNew": false,
+      "shortDesc": "Commercial spin bike \u2014 18kg flywheel, smooth resistance",
+      "description": "The FBS 902 Spin Bike is a commercial-grade indoor cycling bike. Heavy 18kg flywheel delivers smooth, consistent resistance. Adjustable seat and handlebars for all riders.",
+      "specs": {
+        "Model": "FBS 902",
+        "Flywheel": "18 kg belt driven",
+        "Resistance": "Adjustable friction brake",
+        "Seat": "4-way adjustable",
+        "Display": "LCD speed distance calories",
+        "Max User Weight": "180 kg"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "spin bike",
+        "cardio",
+        "cycling"
+      ],
+      "sort": 1
+    },
+    {
+      "id": "p-019",
+      "categoryId": "cat-09",
+      "slug": "olympic-weight-lifting-rod",
+      "name": "Olympic Weight Lifting Rod",
+      "modelCode": "OLY-ROD",
+      "featured": false,
+      "bestseller": true,
+      "isNew": false,
+      "shortDesc": "7ft Olympic barbell \u2014 50mm rotating sleeves",
+      "description": "Premium Olympic Weight Lifting Rod manufactured in-house at Premier Rubbers. 7ft straight bar with 50mm rotating sleeves, suitable for all Olympic weight plates.",
+      "specs": {
+        "Length": "7 ft 213 cm",
+        "Weight": "20 kg",
+        "Sleeves": "50mm rotating",
+        "Knurling": "Medium aggressive",
+        "Finish": "Chrome or black oxide",
+        "Max Capacity": "200 kg"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "barbell",
+        "olympic",
+        "rod"
+      ],
+      "sort": 1
+    },
+    {
+      "id": "p-020",
+      "categoryId": "cat-09",
+      "slug": "hex-trap-bar",
+      "name": "Hex Trap Bar",
+      "modelCode": "HEX-TB",
+      "featured": false,
+      "bestseller": false,
+      "isNew": true,
+      "shortDesc": "Hex bar for deadlifts and farmers carry \u2014 neutral grip",
+      "description": "The Hex Trap Bar allows a person to stand inside the hexagonal frame. Reduces lower back stress compared to straight bar deadlifts. Ideal for loaded carries and shrugs.",
+      "specs": {
+        "Shape": "Hexagonal Diamond",
+        "Handles": "Raised neutral grip",
+        "Sleeves": "50mm Olympic",
+        "Weight": "Approx 25 kg",
+        "Max Capacity": "300 kg"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "trap bar",
+        "hex bar",
+        "deadlift"
+      ],
+      "sort": 2
+    },
+    {
+      "id": "p-021",
+      "categoryId": "cat-10",
+      "slug": "fitbulls-synergy-360",
+      "name": "FitBulls Synergy 360",
+      "modelCode": "SYN-360",
+      "featured": true,
+      "bestseller": false,
+      "isNew": true,
+      "shortDesc": "Multi-functional 360 degree training system",
+      "description": "FitBulls Synergy 360 is a new system for personal training combining several popular total-body dynamic exercises helping trainers effectively train individuals and groups.",
+      "specs": {
+        "Type": "Multi-functional training system",
+        "Exercises": "360-degree functional training",
+        "Frame": "Heavy gauge steel",
+        "Use": "Personal and Group Training",
+        "Max User Weight": "180 kg"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "synergy",
+        "functional",
+        "training"
+      ],
+      "sort": 1
+    },
+    {
+      "id": "p-022",
+      "categoryId": "cat-10",
+      "slug": "fitbulls-deadlift-platform",
+      "name": "FitBulls Deadlift Platform",
+      "modelCode": "DLP-STD",
+      "featured": false,
+      "bestseller": false,
+      "isNew": false,
+      "shortDesc": "Rubber deadlift platform \u2014 protects floor, dampens noise",
+      "description": "FitBulls deadlift platform acts as a cushion during heavy lifts, preventing weight damage and dampening noise. Available in 50mm and 25mm thickness.",
+      "specs": {
+        "Material": "Heavy rubber composite",
+        "Thickness": "25 mm or 50 mm",
+        "Dimensions": "Custom sizes available",
+        "Function": "Weight drop protection and noise dampening",
+        "Use": "Commercial & Home Gym"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "platform",
+        "deadlift",
+        "rubber"
+      ],
+      "sort": 2
+    },
+    {
+      "id": "p-023",
+      "categoryId": "cat-10",
+      "slug": "fitbulls-leg-curl-extension",
+      "name": "Leg Curl Extension Machine",
+      "modelCode": "LCE-PRO",
+      "featured": false,
+      "bestseller": false,
+      "isNew": false,
+      "shortDesc": "Dual function leg curl and extension \u2014 smooth selectorized",
+      "description": "FitBulls Leg Curl Extension Machine provides dual functionality \u2014 seated leg extension and prone leg curl in one compact machine with a smooth selectorized weight stack.",
+      "specs": {
+        "Function": "Leg Curl and Leg Extension",
+        "Type": "Dual function selectorized",
+        "Adjustment": "Seat and pad position adjustable",
+        "Max User Weight": "180 kg",
+        "Use": "Commercial Gym"
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=85&fit=crop"
+      ],
+      "priceLabel": "Get Quote",
+      "inStock": true,
+      "tags": [
+        "leg curl",
+        "extension",
+        "selectorized"
+      ],
+      "sort": 3
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "t-001",
+      "name": "Rajesh Kumar",
+      "role": "Gym Owner",
+      "city": "Delhi NCR",
+      "rating": 5,
+      "review": "We outfitted our entire gym with FitBulls Phantom Series machines and Bouncer Dumbbells. Build quality is commercial-grade \u2014 zero issues after a year of heavy daily use across 40 plus members. Premier Rubbers is now our only supplier."
+    },
+    {
+      "id": "t-002",
+      "name": "Sandeep Patil",
+      "role": "Fitness Enthusiast",
+      "city": "Pune",
+      "rating": 5,
+      "review": "Set up a complete home gym with FitBulls weight plates and a power rack. The powder coating is flawless and the welds are immaculate. Ordered directly from their Meerut facility \u2014 fast turnaround and great pricing."
+    },
+    {
+      "id": "t-003",
+      "name": "Vikram Singh",
+      "role": "Sports Goods Distributor",
+      "city": "Ludhiana",
+      "rating": 5,
+      "review": "As a distributor, I have worked with several manufacturers. Premier Rubbers stands out for consistent quality control and reliable bulk order fulfillment. Their FitBulls dumbbell range moves fast with our retail clients."
+    },
+    {
+      "id": "t-004",
+      "name": "Priya Agarwal",
+      "role": "Certified Personal Trainer",
+      "city": "Mumbai",
+      "rating": 5,
+      "review": "The Hexagon Rubber Dumbbells are a hit with my clients \u2014 no rolling, no floor damage, and the grip stays solid even with sweaty hands. Ordered a full rack-mounted set and could not be happier."
+    },
+    {
+      "id": "t-005",
+      "name": "Arjun Mehta",
+      "role": "CrossFit Box Owner",
+      "city": "Bangalore",
+      "rating": 5,
+      "review": "The Rogue Series machines from FitBulls are exceptional value. We run 6 classes a day and the equipment shows no wear after 8 months. The after-sales support from Mr. Samyak Jain is responsive and genuine."
+    }
+  ],
+  "enquiries": [],
+  "newsletter": [],
+  "admin": [
+    {
+      "id": "admin-1",
+      "username": "admin",
+      "password": "fitbulls2024",
+      "role": "superadmin"
+    }
+  ]
+}
